@@ -1,0 +1,5 @@
+#Whole molecules
+M_POPC_M         PLA
+M_NA_M           NA
+M_CL_M           CL
+M_CA_M           CA

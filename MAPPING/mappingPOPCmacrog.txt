@@ -1,3 +1,4 @@
+#Individual atoms
 M_G1_M        C32 
 M_G1H1_M      H322
 M_G1H2_M      H321
@@ -132,3 +133,6 @@ M_G3N6C3_M	CC
 M_G3N6C3H1_M	C1C
 M_G3N6C3H2_M	C2C
 M_G3N6C3H3_M	C3C
+#Whole molecules
+M_POPC_M         POPC
+M_NA_M           NA
