@@ -84,33 +84,110 @@ NMR and scattering data.
 The quantitative quality of lipid-cholesterol interactions in atomistic resolution models will be determined against 
 NMR and scattering data.
 
+\section{Methods}
+
+\subsection{X-ray scattering experiments}
+
+
+This folder contains SAXS data on POPC multilamellar vesicles (MLVs) at various cholesterol concentrations. Data have been obtained at the EMBL BioSAXS beamline (Hamburg) using 20 keV photons, T = 27°C. Data were analyzed in terms of the SDP-GAP model described in Heftberger et al., J. Appl. Cryst. 2013 and Heftberger et al. Biophys. J. 2015. Data from MLVs are a convolute of structure factor (the crystalline lattice) and form factor. By fitting the scattered intensity data we obtain both contributions. Here we posted only form factors (ASCII format). For information on the quality of the fit we also give plots of the fitted intensity data. The electron density profile has been modelled in terms of the SDP model (see papers by Kucerka and coworkers), that is volume distribution functions are modelled by individual Gaussians or error functions. Cholesterol is also accounted for by two Gaussians. This model has been proposed by Jianjun Pan (USF, Tampa, FL), but is to the best of our knowledge not published (see also PhD Thesis by Peter Heftberger). Additional figures show the volume distribution functions and the resulting electron density profiles.
+
+Authors to consult and potentially include in publications using this data: Peter Heftberger (peter.heftberger@gmx.at), Georg Pabst (georg.pabst@uni-graz.at)
+\subsection{Molecular dynamics simulations}
+\begin{table*}[]
+\centering
+\caption{Simulated lipid bilayers containing cholesterol. The simulation file data sets marked with $^*$ include also part of the trajectory.
+$^a$ The number of lipid molecules
+$^b$ The number of cholesterol molecules
+$^c$ Cholesterol concentration (mol\%)
+$^d$ The number of water molecules
+$^e$ Simulation temperature
+$^f$ The total simulation time
+$^g$ Time frames used in the analysis
+$^h$ Reference link for the downloadable simulation files
+$^i$ Reference for the full simulation details
+}\label{systemsCHOL}
+\begin{tabular}{c c c c c c c c c c c}
+%\hline
+Force field & lipid   & $^a$N$_{\rm l}$ & $^b$N$_{\rm chol}$ &$^c$C$_{\rm CHOL}$  &  $^d$N$_{\rm w}$ & $^e$T (K)  & $^f$t$_{{\rm sim}}$(ns)  & $^g$t$_{{\rm anal}}$ (ns)& $^h$Files  &  $^i$Details\\
+\hline
+Berger-POPC-07~\cite{ollila07a}&   POPC &128 & 0 &0\% & 7290  & 298  & 270 & 240 & [\citenum{bergerFILESpopc}]$^*$ & [\citenum{ferreira15}] \\
+/H\"oltje-CHOL-13~\cite{holtje01,ferreira13}   &    & &  &   &   &  &  &  &  \\
+                               &   POPC &120 & 8 & 6\% &7290   & 298  & 100 & 80 & [\citenum{bergerFILESpopc7chol}]$^*$ & [\citenum{ferreira13}] \\
+                               &   POPC &110 & 18& 14\% & 8481  & 298  & 100 & 80 & [\citenum{bergerFILESpopc15chol}]$^*$ & [\citenum{ferreira13}]  \\
+                               &   POPC &84 & 44 & 34\%  & 6794   & 298  & 100 & 80 & [\citenum{bergerFILESpopc34chol}]$^*$ & [\citenum{ferreira13}] \\
+                               &   POPC &64 & 64 & 50\% & 10314  & 298  & 100 & 80 & [\citenum{bergerFILESpopc50chol}]$^*$ & [\citenum{ferreira13}] \\
+                               &   POPC &50 & 78 & 61\% & 5782   & 298  & 100 & 80 & [\citenum{bergerFILESpopc60chol}]$^*$ & [\citenum{ferreira13}] \\
+CHARMM36\cite{klauda10,lim12}   & POPC   & 128& 0& 0\% & 5120  & 303  & 150 & 100 & [\citenum{charmm36files}]$^*$  &  [\citenum{botan15}]  \\
+%                                & POPC   & 512& 0& 0\% & 23943  & 298  & 170 & 100 & [\citenum{charmmPOPC512files}]$^*$  & SI  \\
+%                                & POPC   & 460& 52& 10\% & 23569  & 298  & 170 & 100 & [\citenum{charmmPOPC512files}]$^*$  & SI  \\
+%                                & POPC   & 436& 76& 15\% & 23331  & 298  & 170 & 100 & [\citenum{charmmPOPC512files}]$^*$  & SI  \\
+                                & POPC   & 100 & 24 & 19\%  &  4960   & 303 & 200 & 100 & [\citenum{charmm36files20perCHOL}]$^*$ & [\citenum{botan15}] \\
+%                                & POPC   & 410& 102& 20\% & 20972  & 298  & 170 & 100 & [\citenum{charmmPOPC512files}]$^*$  & SI  \\
+%                                & POPC   & 384& 128& 25\% & 22327  & 298  & 170 & 100 & [\citenum{charmmPOPC512files}]$^*$  & SI  \\
+%                                & POPC   & 332& 180& 35\% & 21340  & 298  & 170 & 100 & [\citenum{charmmPOPC512files}]$^*$  & SI  \\
+%                                & POPC   & 256& 256& 50\% & 20334  & 298  & 170 & 100 & [\citenum{charmmPOPC512files}]$^*$  & SI  \\
+                               & POPC   & 80 & 80 &50\%  &  4496    & 303 & 200 & 100 & [\citenum{charmm36files50perCHOL}]$^*$ & [\citenum{botan15}] \\
+MacRog\cite{kulig15b}     & POPC   & 128 & 0 & 0\% & 6400  & 310 & 400 & 200 & [\citenum{macrogCHOLfiles}]$^*$ & [\citenum{botan15}] \\ 
+                          & POPC   & 114  & 14 & 11\% & 6400  & 310  & 400 & 200 & [\citenum{macrogCHOLfiles}]$^*$ & [\citenum{botan15}]    \\
+                          & POPC   & 72   & 56 &  44\% & 6400  & 310  & 400 & 200 & [\citenum{macrogCHOLfiles}]$^*$ & [\citenum{botan15}]    \\
+                             & POPC   & 64  & 64 & 50\% & 6400  & 310  & 400 & 200 & [\citenum{macrogCHOLfiles}]$^*$ & [\citenum{botan15}]    \\
+                             & POPC   & 56   & 72 & 56\% & 6400  & 310  & 400 & 200 & [\citenum{macrogCHOLfiles}]$^*$ & [\citenum{botan15}]    \\
+\end{tabular}
+\end{table*} 
+
+
 \section{comparison of acyl chain order parameters between experiments and simulations}
 Order parameters from simulations and experiments for acyl chains of 1-palmitoyl-2-oleoylphosphatidylcholine (POPC)
 are shown in Fig. \ref{OrderParametersCHOL}.
-
-\todo{Why are the order parameters of CHARMM36 too large compared to simulations even without cholesterol?}
-
-\todo{Why there is decrease in order parameters towards beginning of acyl chain in MacRog model without cholesterol?}
-
-\todo{Do the results suggests that condensation effect is too strong in MacRog model?}
-
  \begin{figure*}[]
   \centering
   \includegraphics[width=17.2cm]{../FIGS/OrderParametersCHOL.eps}
 
   \caption{\label{OrderParametersCHOL}
     Order parameters from simulations and experiments for acyl chains of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC).}
-  
+
+  \todo{Why are the order parameters of CHARMM36 too large compared to simulations even without cholesterol? 
+    Discussion in https://github.com/NMRLipids/NmrLipidsCholXray/issues/4}  
+
+  \todo{Why there is decrease in order parameters towards beginning of acyl chain in MacRog model without cholesterol?}
+
+  \todo{Do the results suggests that condensation effect is too strong in MacRog and Berger models?
+  Discussion in https://github.com/NMRLipids/NmrLipidsCholXray/issues/5}
 \end{figure*}
 
-\section{comparison of structure factors between experiments and simulations}
+The order parameter changes as a function of cholesterol for each segment are shown in Fig.~\ref{OrderParametersCHOLchanges}
+(currently only sn-1).
 
-\todo{Structure factors should be calculated from the data with cholesterol
-from CHARMM and MacRog simulations (the trajectories are in Zenodo). The calculations from Berger model should be checked
-(data in https://github.com/NMRLipids/NmrLipidsCholXray/tree/master/scratch/POPCberger)}
+ \begin{figure}[]
+  \centering
+  \includegraphics[width=8cm]{../FIGS/OrderParametersCHANGEScholSN1.eps}
 
-\todo{The experimental data delivered by Georg Pabst and Peter Heftberger should be plotted
-together with the simulation results. The data is already in https://github.com/NMRLipids/NmrLipidsCholXray/tree/master/DATA/POPC-Cholesterol}
+  \caption{\label{OrderParametersCHOLchanges}
+    Order parameter changes from simulations and experiments for each segment in sn-1 chain of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC) as a function of cholesterol concentration.}
+
+\end{figure}
+
+\section{Comparison of form factors between experiments and simulations}
+The form factors calculated from different simulations with different cholesterol content are shown in 
+Fig.~\ref{FormFactors}.
+
+ \begin{figure}[]
+  \centering
+  \includegraphics[width=8cm]{../FIGS/FormFactors.eps}
+
+  \caption{\label{FormFactors}
+    Form factors from simulations and experiments.
+  }
+
+  \todo{Form factor calculation method should be double checked.}
+
+  \todo{Experimental form factor amplitudes are not scaled to match with simulations, as done usually}
+
+  \todo{Not all experimental and simulation data is here.}
+    
+\end{figure}
+
+
 
 \section{Conclusions}
 
@@ -131,7 +208,7 @@ together with the simulation results. The data is already in https://github.com/
 \begin{acknowledgments}
 % Put your acknowledgments here.
 \end{acknowledgments}
-
+\newpage
 % Create the reference section using BibTe
 \bibliography{refs.bib}
 
