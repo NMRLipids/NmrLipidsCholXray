@@ -10,17 +10,25 @@
 #psc -r < ../DATA/OPcholBERGERsn-1_1.dat | sc -W% - > ../DATA/OPcholBERGERsn-1_1transpose.dat
 
 #MACROG
-POPCsn1DATA=../scratch/POPCmacrog/OrderParamSN1.dat
-POPCchol11percSN1data=../scratch/POPCmacrog/OrderParamSN1chol10.dat
-POPCchol44percSN1data=../scratch/POPCmacrog/OrderParamSN1chol40.dat
-POPCchol50percSN1data=../scratch/POPCmacrog/OrderParamSN1chol50.dat
-POPCchol56percSN1data=../scratch/POPCmacrog/OrderParamSN1chol60.dat
-paste $POPCsn1DATA $POPCchol11percSN1data $POPCchol44percSN1data $POPCchol50percSN1data $POPCchol56percSN1data | awk 'BEGIN{print "0   11   44    50    56"}{print $2"   "$5"   "$8"    "$11"   "$14}' > ../DATA/OPcholMACROGsn-1_1.dat
-psc -r < ../DATA/OPcholMACROGsn-1_1.dat | sc -W% - > ../DATA/OPcholMACROGsn-1_1transpose.dat
+#POPCsn1DATA=../scratch/POPCmacrog/OrderParamSN1.dat
+#POPCchol11percSN1data=../scratch/POPCmacrog/OrderParamSN1chol10.dat
+#POPCchol44percSN1data=../scratch/POPCmacrog/OrderParamSN1chol40.dat
+#POPCchol50percSN1data=../scratch/POPCmacrog/OrderParamSN1chol50.dat
+#POPCchol56percSN1data=../scratch/POPCmacrog/OrderParamSN1chol60.dat
+#paste $POPCsn1DATA $POPCchol11percSN1data $POPCchol44percSN1data $POPCchol50percSN1data $POPCchol56percSN1data | awk 'BEGIN{print "0   11   44    50    56"}{print $2"   "$5"   "$8"    "$11"   "$14}' > ../DATA/OPcholMACROGsn-1_1.dat
+#psc -r < ../DATA/OPcholMACROGsn-1_1.dat | sc -W% - > ../DATA/OPcholMACROGsn-1_1transpose.dat
 
 #CHARMM36
-POPCsn1DATA=../scratch/POPCcharmm/OrderParamSN1.dat
-POPCchol20percSN1data=../scratch/POPCcharmm/OrderParamSN1_20molCHOL.dat
-POPCchol50percSN1data=../scratch/POPCcharmm/OrderParamSN1_50molCHOL.dat
-paste $POPCsn1DATA $POPCchol20percSN1data $POPCchol50percSN1data | awk 'BEGIN{print "0   20   50"}{print $2"   "$5"   "$8}' > ../DATA/OPcholCHARMM36sn-1_1.dat
-psc -r < ../DATA/OPcholCHARMM36sn-1_1.dat | sc -W% - > ../DATA/OPcholCHARMM36sn-1_1transpose.dat
+#POPCsn1DATA=../scratch/POPCcharmm/OrderParamSN1.dat
+#POPCchol20percSN1data=../scratch/POPCcharmm/OrderParamSN1_20molCHOL.dat
+#POPCchol50percSN1data=../scratch/POPCcharmm/OrderParamSN1_50molCHOL.dat
+#paste $POPCsn1DATA $POPCchol20percSN1data $POPCchol50percSN1data | awk 'BEGIN{print "0   20   50"}{print $2"   "$5"   "$8}' > ../DATA/OPcholCHARMM36sn-1_1.dat
+#psc -r < ../DATA/OPcholCHARMM36sn-1_1.dat | sc -W% - > ../DATA/OPcholCHARMM36sn-1_1transpose.dat
+
+#SLIPIDS
+POPCsn1DATA=../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+POPCchol10percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+10%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+POPCchol20percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+20%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+POPCchol30percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+30%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+paste $POPCsn1DATA $POPCchol10percSN1data $POPCchol20percSN1data $POPCchol30percSN1data | awk 'BEGIN{print "0  10  20   30"}{if(NR>1)print $2"   "$5"   "$8"   "$11}' > ../DATA/OPcholSLIPIDsn-1_1.dat
+psc -r < ../DATA/OPcholSLIPIDsn-1_1.dat | sc -W% - > ../DATA/OPcholSLIPIDsn-1_1transpose.dat
