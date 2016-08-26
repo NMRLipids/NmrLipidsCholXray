@@ -22,7 +22,10 @@ plot "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoyl.txt"  using 1:2 title 'Ex
      "../../scratch/POPCmacrog/OrderParamSN1.dat" using ($1-1):($2*(-1)) title 'MacRog POPC, T=310K' with linespoint linetype 1 pt 9 lc rgb 'green', \
      "../../scratch/POPCmacrog/OrderParamSN1.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'green', \
      "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_Berger/sn-1_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) title 'Berger POPC, T=300K' with linespoint linetype 1 pt 9 lc rgb 'red',\
-     "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_Berger/sn-1_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red'
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_Berger/sn-1_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) title 'Slipid POPC, T=310K' with linespoint linetype 1 pt 9 lc rgb 'violet',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'violet'
+
 
 set title "POPC/CHOL (50 mol%)"
 
@@ -55,7 +58,9 @@ plot "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_oleoyl.txt"  using 1:2 notitle  wit
      "../../scratch/POPCmacrog/OrderParamSN2.dat" using ($1-1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'green', \
      "../../scratch/POPCmacrog/OrderParamSN2.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'green',\
      "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_Berger/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red',\
-     "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_Berger/sn-2_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red'
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_Berger/sn-2_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_SLIPIDS/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) title 'Slipid POPC, T=310K' with linespoint linetype 1 pt 9 lc rgb 'violet',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_SLIPIDS/sn-2_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'violet'
 
 
 set key at screen 1.3,screen 0.72 maxcols 2 maxrows 6
