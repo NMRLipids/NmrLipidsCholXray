@@ -1,11 +1,10 @@
 #set term postscript enhanced color  
 set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
 set output "../OrderParametersCHANGEScholSN1.eps"
-set size 1.0, 1.6
+set size 1.0, 1.7
 set multiplot  layout 15,1
 #set xrange [1:16] 
 #set key above
-#set key at screen 0.6,screen 0.8 maxcols 2 maxrows 6
 #set key font ",13"
 
 #set label 100 "sn-1" at graph 0.05,0.85 font ",18"
@@ -16,111 +15,131 @@ set ytic 0.1
 
 set xtics format " "
 
-set ylabel "2"
+set ylabel "C_2"
 set origin 0,14*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:2 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
-       "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$2) notitle with linespoints  linetype 1 pt 5 lc rgb 'red'
-set ylabel "3"
+       "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$2) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$2) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_3"
 set origin 0,13*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:3 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$3) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$3) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "4"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$3) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$3) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+
+set key at screen 0.6,screen 1.7 maxcols 2 maxrows 6
+set ylabel "C_4"
 set origin 0,12*0.103
 set size 1.0, 0.165
-plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:4 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
-       "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$4) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
-       "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$4) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$4) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "5"
+plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:4 title 'Experiments' with linespoints  linetype 1 pt 5 lc rgb 'black',\
+       "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$4) title 'Berger' with linespoints  linetype 1 pt 5 lc rgb 'red',\
+       "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$4) title 'MacRog' with linespoints  linetype 1 pt 5 lc rgb 'green',\
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$4) title 'CHARMM36' with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$4) title 'Slipids' with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_5"
 set origin 0,11*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:5 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$5) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$5) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$5) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "6"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$5) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$5) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_6"
 set origin 0,10*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:6 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$6) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$6) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$6) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "7"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$6) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$6) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_7"
 set origin 0,9*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:7 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$7) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$7) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$7) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "8"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$7) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$7) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_8"
 set origin 0,8*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:8 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$8) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$8) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$8) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "9"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$8) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$8) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_9"
 set origin 0,7*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:9 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$9) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$9) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$9) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "10"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$9) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$9) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_{10}"
 set yrange [0.14:0.39]
 set origin 0,6*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:10 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$10) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$10) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$10) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "11"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$10) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$10) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_{11}"
 set yrange [0.10:0.35]
 set origin 0,5*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:11 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$11) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$11) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$11) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "12"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$11) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$11) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_{12}"
 set origin 0,4*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:12 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$12) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$12) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$12) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "13"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$12) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$12) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_{13}"
 set origin 0,3*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:13 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$13) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$13) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$13) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "14"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$13) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$13) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_{14}"
 set yrange [0.04:0.29]
 set origin 0,2*0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:14 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$14) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$14) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$14) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "15"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$14) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$14) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+set ylabel "C_{15}"
 set origin 0,0.103
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:15 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$15) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$15) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$15) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
-set ylabel "16"
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$15) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$15) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
+
+set xtics format "%g"
+set xlabel "Cholesterol mol%"
+set ylabel "C_{16}"
 set yrange [0.0:0.25]
 set size 1.0, 0.165
 plot  "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:16 notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
        "../../DATA/OPcholBERGERsn-1_1transpose.dat" using 1:((-1)*$16) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/OPcholMACROGsn-1_1transpose.dat" using 1:((-1)*$16) notitle with linespoints  linetype 1 pt 5 lc rgb 'green',\
-       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$16) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue'
+       "../../DATA/OPcholCHARMM36sn-1_1transpose.dat" using 1:((-1)*$16) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/OPcholSLIPIDsn-1_1transpose.dat" using 1:((-1)*$16) notitle with linespoints  linetype 1 pt 5 lc rgb 'violet'
       
 
  
