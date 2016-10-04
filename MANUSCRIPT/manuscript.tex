@@ -218,6 +218,30 @@ Fig.~\ref{FormFactors}.
 % Put your acknowledgments here.
 \end{acknowledgments}
 \newpage
+\appendix
+\begin{center}
+{\bf SUPPLEMENTARY INFORMATION}
+\end{center}
+\section{CHARMM36 results from different simulation packages}
+The results from CHARMM36 model for lipid bilayers from different 
+simulation packages have been reported to give different results in
+the literature \cite{piggot12,lee16}. The results are mainly
+dependent on different Lennart-Jones cut--off settings, but
+all the details are not quite understood. In this work we use
+the results from Gromacs 5 with settings suggested to be optimal
+by Gromacs webpage. We also compared the results from Gromacs 5 with
+these settings to the results simulated with NAMD, OpenMM and literature
+values. The comparison is shown in Fig. \ref{programsCOMP}
+ \begin{figure}[]
+  \centering
+  \includegraphics[width=8cm]{../FIGS/OrderParametersPROGRAMS.eps}
+
+  \caption{\label{programsCOMP}
+    Results for CHARMM36 model \cite{klauda10} from different simulation packages.
+    Discussion going on at {\it https://github.com/NMRLipids/NmrLipidsCholXray/issues/4}.
+  }
+\end{figure}
+
 % Create the reference section using BibTe
 \bibliography{refs.bib}
 

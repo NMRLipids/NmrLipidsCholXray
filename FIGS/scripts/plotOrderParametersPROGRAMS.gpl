@@ -1,0 +1,61 @@
+#set term postscript enhanced color  
+set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
+set output "../OrderParametersPROGRAMS.eps"
+set size 0.7, 0.85
+set multiplot  layout 2,1
+set xrange [1:16] 
+set ytic 0.03
+#set key above
+set key at screen 0.7,screen 0.83 maxcols 1 maxrows 8
+set key font ",13"
+
+set label 100 "sn-1" at graph 0.75,0.85 font ",18"
+#set title "POPC"
+
+set yrange [0:0.27]
+set ylabel "-S_{CH}"
+set origin 0,0.35
+set size 0.65, 0.35
+plot "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoyl.txt"  using 1:2 title 'Experimental POPC, T=300K' with linespoints  linetype 1 pt 9 lc rgb 'black', \
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_CHARMM36/sn-1_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) title 'CHARMM36 POPC, T=310K, Gromacs 5.0' with linespoint linetype 1 pt 9 lc rgb 'blue',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_CHARMM36/sn-1_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'blue',\
+     "../../DATA/charmm36/chol0/OrderParamSN1_100-200ns.dat" using ($1-1):($2*(-1)) title 'CHARMM36 POPC, T=303K, Gromacs 5.1.2' with linespoint linetype 1 pt 9 lc rgb 'red',\
+     "../../DATA/charmm36/chol0/OrderParamSN1_100-200ns.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_CHARMM36_GROMACS5.1.2/sn-1_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) title 'CHARMM36 POPC, T=300K, Gromacs 5.1.2' with linespoint linetype 1 pt 9 lc rgb 'orange',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_CHARMM36_GROMACS5.1.2/sn-1_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'orange',\
+     "../../DATA/charmm36/chol0_openMM/OrderParamSN1_sim2.dat" using ($1-1):($2*(-1)) title 'CHARMM36 POPC, T=303K, openMM' with linespoint linetype 1 pt 9 lc rgb 'green',\
+     "../../DATA/charmm36/chol0_openMM/OrderParamSN1_sim2.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'green',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T303K/MODEL_CHARMM36_NAMD/sn-1_Order_Parameters_Simulation.dat" using ($1):($2*(1)) title 'CHARMM36 POPC, T=303K, NAMD' with linespoint linetype 1 pt 9 lc rgb 'violet',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T303K/MODEL_CHARMM36_CHARMM/sn-1_Order_Parameters_Simulation.dat" using ($1):($2*(1)) title 'CHARMM36 POPC, T=303K, CHARMM (literature)' with linespoint linetype 1 pt 9 lc rgb 'brown',\
+     "../../scratch/POPCcharmm/OrderParamSN1.dat" using ($1-1):($2*(-1)) title 'CHARMM36 POPC, T=303K, Gromacs 4.5'  with linespoint linetype 0 pt 8 lc rgb 'blue', \
+     "../../scratch/POPCcharmm/OrderParamSN1.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 0 pt 8 lc rgb 'blue', \
+
+
+
+set notitle
+set label 100 "sn-2" at graph 0.75,0.85 font ",18"
+set xrange [1:18] 
+#set yrange [-0.015:0.11]
+set ylabel "-S_{CH}"
+set xlabel "Acyl chain carbon number"
+set origin 0,0
+set size 0.65, 0.35
+plot "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_oleoyl.txt"  using 1:2 notitle  with linespoints  linetype 1 pt 9 lc rgb 'black', \
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_CHARMM36/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'blue',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_CHARMM36/sn-2_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'blue',\
+     "../../DATA/charmm36/chol0/OrderParamSN2_100-200ns.dat" using ($1-1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red',\
+     "../../DATA/charmm36/chol0/OrderParamSN2_100-200ns.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_CHARMM36_GROMACS5.1.2/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'orange',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_CHARMM36_GROMACS5.1.2/sn-2_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'orange',\
+     "../../DATA/charmm36/chol0_openMM/OrderParamSN2_sim2.dat" using ($1-1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'green',\
+     "../../DATA/charmm36/chol0_openMM/OrderParamSN2_sim2.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'green',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T303K/MODEL_CHARMM36_NAMD/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(1)) notitle with linespoint linetype 1 pt 9 lc rgb 'violet',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T303K/MODEL_CHARMM36_CHARMM/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(1)) notitle with linespoint linetype 1 pt 9 lc rgb 'brown',\
+     "../../scratch/POPCcharmm/OrderParamSN2.dat" using ($1-1):($2*(-1)) notitle with linespoint linetype 0 pt 8 lc rgb 'blue', \
+     "../../scratch/POPCcharmm/OrderParamSN2.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 0 pt 8 lc rgb 'blue', \
+
+
+
+
+unset multiplot
+
