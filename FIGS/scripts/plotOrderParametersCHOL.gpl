@@ -91,11 +91,12 @@ plot "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_oleoyl.txt"  using 1:6 notitle with
      "../../scratch/POPCmacrog/OrderParamSN2chol50.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'green',\
      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_Berger/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red',\
      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_Berger/sn-2_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red',\
-      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS_REPORTEDbyFF/sn-2_Order_Parameters_Simulation.dat" using ($1):($2) notitle with linespoint linetype 1 pt 8 lc rgb 'violet',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'violet',\
+     "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/sn-2_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'violet',\
      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T310K/MODEL_SLIPIDS/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'violet',\
      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T310K/MODEL_SLIPIDS/sn-2_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'violet'
-#     "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/sn-2_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'violet',\
-#     "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/sn-2_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'violet',\
+#     "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS_REPORTEDbyFF/sn-2_Order_Parameters_Simulation.dat" using ($1):($2) notitle with linespoint linetype 1 pt 8 lc rgb 'violet',\
+
 
 
 unset multiplot
