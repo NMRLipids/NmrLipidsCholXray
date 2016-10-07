@@ -57,9 +57,9 @@ set label 100 "50% cholesterol" at graph 0.65,0.85 #font ",18"
 set size 1.0, 0.18
 plot  "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_Berger/Form_Factor_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lc rgb 'red',\
       "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T303K/MODEL_CHARMM36_GROMACS4.5/Form_Factor_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lc rgb 'blue',\
-      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/Form_Factor_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lc rgb 'violet',\
       "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T310K/MODEL_SLIPIDS/Form_Factor_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lc rgb 'violet',\
       "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T300K/Form_Factor_From_Experiments.dat" using 1:2 notitle with lines linetype 1 lc rgb 'black'
+#      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/Form_Factor_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lc rgb 'violet',\
 
  
 
