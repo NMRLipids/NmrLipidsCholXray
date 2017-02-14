@@ -10,8 +10,8 @@ set multiplot  layout 15,1
 #set label 100 "sn-1" at graph 0.05,0.85 font ",18"
 #set title "POPC"
 
-set yrange [0.15:0.4]
-set ytic 0.1
+set yrange [0.15:0.39]
+set ytic 0.05
 
 set xtics format " "
 
