@@ -90,39 +90,79 @@ NMR and scattering data.
 
 %\label{}
 \section{Introduction}
-Importance of phospholipid cholesterol interactions in cellular membranes
-have been reckognized for long time \cite{??}. Various ideas about 
-lateral heterogeneities driven interactions between cholesterol, phosphatidylcholine
-other other membrane lipids has been proposed \cite{??}. 
-Especially coexistence of liquid-ordered and liquid-disordered phases
-in PC-cholesterol mixtures has been suggested to be important in
-biological lipid membranes \cite{??}. 
+Details of intermolecular interactions determine the phase
+behaviour and details lateral organization of lipid and bilayers
+containing cholesterol \cite{??}.
+Formation lateral heterogeneities \cite{??}, lipid rafts \cite{??}
+and superlattices \cite{??} in cellular membranes have been
+suggested to be driven by interactions between cholesterol
+and lipids. While detailed experimental information of these interactions
+is relatively sparse, atomistic resolution molecular dynamics simulations
+have been widely applied to give detailed explanations of lipid bilayer
+lateral organization and lipid-cholesterol interactions \cite{??}.
 
-Phase diagram of PC lipid cholesterol systems, including lo-ld coexistence
-can be explained by simple models where cholesterol is assumed to 
-induce order in neighboring lipids \cite{??}. This is important
-achievement in order to understand biomembrane organization. 
-However, also more detailed interactions driving interactions 
-between cholesterol and other membrane lipid molecules are
-often relevant. Several attempts to understand these interactions
-have been made by using classical molecular dynamics simulations \cite{??}.
-These simulations give atomistic resolution information, which not
-directly accessible with any other techinique. However, 
-the simulations often suffer from inaccuracies in force field
-descriptions. Acyl chain region is usually well described in 
-molecular dynamics simulation models, which is not the case for 
-glycerol backbone and headgroup \cite{??}. 
-The same applies to the systems with cholesterol. Practically all simulation
-models qualitatively reproduce the condesing due to cholesterol, observed
-as increase in acyl chain order parameters and decrease of area per molecule.
-However, the some models significantly overestimate the changes in headgroup
-due to the addition of cholesterol \cite{??}. 
+Simulations qualitatively reproduce the cholesterol condensation effect,
+but quantitatve comparison to robust experimental data has not been
+typically done. This is partly due to the lack of availability of
+systematic experimental data sets for the comparison and partly
+due to the lack of protocols for validating intermolecular interactions
+in lipid bilayer simulations against experiments.
+Scattering experiments are more difficult to interpret for
+mixed lipid bilayers than for single component bilayers \cite{??},
+thus area per molecule values, one of the main quantity used to
+compare simulations to experiments, have not been
+available for lipid cholesterol mixtures. Systematic experimental
+data set for lipid C-H bond order parameters with different cholesterol
+concentrations in POPC bilayer has been published only relatively recently \cite{ferreira13}.
 
-On the other hand, detailed analysis of lateral organization of 
-lipid-cholesterol mixtures reveal significant differences between
-different models. For example, significant angular organization
-of lipids around cholesterol was observed in simulations with Berger
-Höjtje models, while CHARMM36 simulations did not show such behaviour.
+In this work we present also the experimental scattering form factor
+data for POPC-cholesterol mixtures by systematically increasing the
+cholesterol concentration. Our goal is to show that the combination
+of systematically measured C-H bond order parameter and scattering form
+factor data can be used to validate the quality of lipid-cholesterol
+intermolecular interactions MD simulations. MD simulations can be also
+potentially used to give structural interpretation for form factor
+measured from mixed systems, which is a major challenge for current methods \cite{??}. 
+The approach should be also applicable for mixed lipid bilayers with
+other than lipid-cholesterol mixtures.
+
+
+
+
+
+%Importance of phospholipid cholesterol interactions in cellular membranes
+%have been reckognized for long time \cite{??}. Various ideas about 
+%lateral heterogeneities driven interactions between cholesterol, phosphatidylcholine
+%other other membrane lipids has been proposed \cite{??}. 
+%Especially coexistence of liquid-ordered and liquid-disordered phases
+%in PC-cholesterol mixtures has been suggested to be important in
+%biological lipid membranes \cite{??}. 
+
+%Phase diagram of PC lipid cholesterol systems, including lo-ld coexistence
+%can be explained by simple models where cholesterol is assumed to 
+%induce order in neighboring lipids \cite{??}. This is important
+%achievement in order to understand biomembrane organization. 
+%However, also more detailed interactions driving interactions 
+%between cholesterol and other membrane lipid molecules are
+%often relevant. Several attempts to understand these interactions
+%have been made by using classical molecular dynamics simulations \cite{??}.
+%These simulations give atomistic resolution information, which not
+%directly accessible with any other techinique. However, 
+%the simulations often suffer from inaccuracies in force field
+%descriptions. Acyl chain region is usually well described in 
+%molecular dynamics simulation models, which is not the case for 
+%glycerol backbone and headgroup \cite{??}. 
+%The same applies to the systems with cholesterol. Practically all simulation
+%models qualitatively reproduce the condesing due to cholesterol, observed
+%as increase in acyl chain order parameters and decrease of area per molecule.
+%However, the some models significantly overestimate the changes in headgroup
+%due to the addition of cholesterol \cite{??}. 
+
+%On the other hand, detailed analysis of lateral organization of 
+%lipid-cholesterol mixtures reveal significant differences between
+%different models. For example, significant angular organization
+%of lipids around cholesterol was observed in simulations with Berger
+%Höjtje models, while CHARMM36 simulations did not show such behaviour.
 
 
 
@@ -132,29 +172,30 @@ Höjtje models, while CHARMM36 simulations did not show such behaviour.
 \subsection{X-ray scattering experiments}
 
 
-This folder contains SAXS data on POPC multilamellar vesicles (MLVs) at various cholesterol concentrations. Data have been obtained at the EMBL BioSAXS beamline (Hamburg) using 20 keV photons, T = 27°C. Data were analyzed in terms of the SDP-GAP model described in Heftberger et al., J. Appl. Cryst. 2013 and Heftberger et al. Biophys. J. 2015. Data from MLVs are a convolute of structure factor (the crystalline lattice) and form factor. By fitting the scattered intensity data we obtain both contributions. Here we posted only form factors (ASCII format). For information on the quality of the fit we also give plots of the fitted intensity data. The electron density profile has been modelled in terms of the SDP model (see papers by Kucerka and coworkers), that is volume distribution functions are modelled by individual Gaussians or error functions. Cholesterol is also accounted for by two Gaussians. This model has been proposed by Jianjun Pan (USF, Tampa, FL), but is to the best of our knowledge not published (see also PhD Thesis by Peter Heftberger). Additional figures show the volume distribution functions and the resulting electron density profiles.
+SAXS data on POPC multilamellar vesicles (MLVs) at various cholesterol concentrations
+has been measured. Data have been obtained at the EMBL BioSAXS beamline (Hamburg) using 20 keV photons, T = 27°C. Data were analyzed in terms of the SDP-GAP model described in Heftberger et al., J. Appl. Cryst. 2013 and Heftberger et al. Biophys. J. 2015. Data from MLVs are a convolute of structure factor (the crystalline lattice) and form factor. By fitting the scattered intensity data we obtain both contributions. Here we posted only form factors (ASCII format). For information on the quality of the fit we also give plots of the fitted intensity data. The electron density profile has been modelled in terms of the SDP model (see papers by Kucerka and coworkers), that is volume distribution functions are modelled by individual Gaussians or error functions. Cholesterol is also accounted for by two Gaussians. This model has been proposed by Jianjun Pan (USF, Tampa, FL), but is to the best of our knowledge not published (see also PhD Thesis by Peter Heftberger). Additional figures show the volume distribution functions and the resulting electron density profiles.
 
 Authors to consult and potentially include in publications using this data: Peter Heftberger (peter.heftberger@gmx.at), Georg Pabst (georg.pabst@uni-graz.at)
 \subsection{Molecular dynamics simulations}
 \begin{table*}[]
-\centering
-\caption{Simulated lipid bilayers containing cholesterol. The simulation file data sets marked with $^*$ include also part of the trajectory.
-$^a$ The number of lipid molecules
-$^b$ The number of cholesterol molecules
-$^c$ Cholesterol concentration (mol\%)
-$^d$ The number of water molecules
-$^e$ Simulation temperature
-$^f$ The total simulation time
-$^g$ Time frames used in the analysis
-$^h$ Reference link for the downloadable simulation files
-$^i$ Reference for the full simulation details
-}\label{systemsCHOL}
-\begin{tabular}{c c c c c c c c c c c}
-%\hline
-Force field & lipid   & $^a$N$_{\rm l}$ & $^b$N$_{\rm chol}$ &$^c$C$_{\rm CHOL}$  &  $^d$N$_{\rm w}$ & $^e$T (K)  & $^f$t$_{{\rm sim}}$(ns)  & $^g$t$_{{\rm anal}}$ (ns)& $^h$Files  &  $^i$Details\\
-\hline
-Berger-POPC-07~\cite{ollila07a}&   POPC &128 & 0 &0\% & 7290  & 298  & 270 & 240 & [\citenum{bergerFILESpopc}]$^*$ & [\citenum{ferreira15}] \\
-/H\"oltje-CHOL-13~\cite{holtje01,ferreira13}   &    & &  &   &   &  &  &  &  \\
+  \centering
+  \caption{Simulated lipid bilayers containing cholesterol. The simulation file data sets marked with $^*$ include also part of the trajectory.
+    $^a$ The number of lipid molecules
+    $^b$ The number of cholesterol molecules
+    $^c$ Cholesterol concentration (mol\%)
+    $^d$ The number of water molecules
+    $^e$ Simulation temperature
+    $^f$ The total simulation time
+    $^g$ Time frames used in the analysis
+    $^h$ Reference link for the downloadable simulation files
+    $^i$ Reference for the full simulation details
+  }\label{systemsCHOL}
+  \begin{tabular}{c c c c c c c c c c c}
+    %\hline
+    Force field & lipid   & $^a$N$_{\rm l}$ & $^b$N$_{\rm chol}$ &$^c$C$_{\rm CHOL}$  &  $^d$N$_{\rm w}$ & $^e$T (K)  & $^f$t$_{{\rm sim}}$(ns)  & $^g$t$_{{\rm anal}}$ (ns)& $^h$Files  &  $^i$Details\\
+    \hline
+    Berger-POPC-07~\cite{ollila07a}&   POPC &128 & 0 &0\% & 7290  & 298  & 270 & 240 & [\citenum{bergerFILESpopc}]$^*$ & [\citenum{ferreira15}] \\
+    /H\"oltje-CHOL-13~\cite{holtje01,ferreira13}   &    & &  &   &   &  &  &  &  \\
                                &   POPC &120 & 8 & 6\% &7290   & 298  & 100 & 80 & [\citenum{bergerFILESpopc7chol}]$^*$ & [\citenum{ferreira13}] \\
                                &   POPC &110 & 18& 14\% & 8481  & 298  & 100 & 80 & [\citenum{bergerFILESpopc15chol}]$^*$ & [\citenum{ferreira13}]  \\
                                &   POPC &84 & 44 & 34\%  & 6794   & 298  & 100 & 80 & [\citenum{bergerFILESpopc34chol}]$^*$ & [\citenum{ferreira13}] \\
@@ -164,16 +205,17 @@ CHARMM36\cite{klauda10,lim12}  & POPC   & 200& 0& 0\% & 9000  & 310  & ? & 100 &
                                & POPC   & 200& 22& 10\% & 9000  & 310  & ? & 100 & [\citenum{charmm36gromacs5chol0-30}]$^*$  &  SI   \\
                                & POPC   & 200& 50& 20\% & 9000  & 310  & ? & 100 & [\citenum{charmm36gromacs5chol0-30}]$^*$  &  SI   \\
                                & POPC   & 200& 86& 30\% & 9000  & 310  & ? & 100 & [\citenum{charmm36gromacs5chol0-30}]$^*$  &  SI   \\
-                               & POPC   & 200& 134& 40\% & 15030  & 310  & ? & 100 & [\citenum{charmm36gromacs5chol40-50}]$^*$  &  SI   \\
-                               & POPC   & 200& 200& 50\% & 18000  & 310  & ? & 100 & [\citenum{charmm36gromacs5chol40-50}]$^*$  &  SI   \\
+                               & POPC   & 200& 134& 40\% & 15030  & 310  & 109 & 100 & [\citenum{charmm36gromacs5chol40-50}]$^*$  &  SI   \\
+                               & POPC   & 200& 200& 50\% & 18000  & 310  & 109 & 100 & [\citenum{charmm36gromacs5chol40-50}]$^*$  &  SI   \\
 Slipids\cite{jambeck12b,jambeck12,jambeck13b}  & POPC   & 200 & 0 & 0\%   & ?  & 310 & ? & 100 & [\citenum{slipidsCHOL0-30T310}]$^*$ & SI  \\
+                                               & POPC   & 512 & 0 & 0\%   & 23943  & 310 & 170 & 100 & [\citenum{slipidsCHOL0T298}]$^*$ & SI  \\
                                                & POPC   & 200 & 22 & 10\% & ?  & 310 & ? & 100 & [\citenum{slipidsCHOL0-30T310}]$^*$ & SI  \\
                                                & POPC   & 200 & 50 & 20\% & ?  & 310 & ? & 100 & [\citenum{slipidsCHOL0-30T310}]$^*$ & SI  \\
                                                & POPC   & 200 & 86 & 30\% & ?  & 310 & ? & 100 & [\citenum{slipidsCHOL0-30T310}]$^*$ & SI  \\
-                                               & POPC   & ? & ? & 30\% & ?  & 298 & 170 & 100 & [\citenum{slipidsCHOL30T298}]$^*$ & SI  \\
-                                               & POPC   & 200 & 134 & 40\% & ?  & 310 & ? & 100 & [\citenum{slipidsCHOL40-50T310}]$^*$ & SI  \\
-                                               & POPC   & 200 & 200 & 50\% & ?  & 310 & ? & 100 & [\citenum{slipidsCHOL40-50T310}]$^*$ & SI  \\
-                                               & POPC   & ?& ? & 50\% & ?  & 298 & 170 & 100 & [\citenum{slipidsCHOL50T298}]$^*$ & SI  \\ 
+                                               & POPC   & 358 & 154 & 30\% & 21183  & 298 & 170 & 100 & [\citenum{slipidsCHOL30T298}]$^*$ & SI  \\
+                                               & POPC   & 200 & 134 & 40\% & ?  & 310 & 109 & 100 & [\citenum{slipidsCHOL40-50T310}]$^*$ & SI  \\
+                                               & POPC   & 200 & 200 & 50\% & ?  & 310 & 109 & 100 & [\citenum{slipidsCHOL40-50T310}]$^*$ & SI  \\
+                                               & POPC   & 256 & 256 & 50\% & 20334  & 298 & 170 & 100 & [\citenum{slipidsCHOL50T298}]$^*$ & SI  \\ 
      MacRog\cite{kulig15b}     & POPC   & 128 & 0 & 0\% & 6400  & 310 & 400 & 200 & [\citenum{macrogCHOLfiles}]$^*$ & [\citenum{botan15}] \\ 
                           & POPC   & 114  & 14 & 11\% & 6400  & 310  & 400 & 200 & [\citenum{macrogCHOLfiles}]$^*$ & [\citenum{botan15}]    \\
                           & POPC   & 72   & 56 &  44\% & 6400  & 310  & 400 & 200 & [\citenum{macrogCHOLfiles}]$^*$ & [\citenum{botan15}]    \\
