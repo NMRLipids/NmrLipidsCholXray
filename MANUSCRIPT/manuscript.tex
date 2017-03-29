@@ -166,17 +166,122 @@ other than lipid-cholesterol mixtures.
 
 
 
+\section{Results and Discussion}
+
+\subsection{Structural sampling of molecules in bilayers with cholesterol}
+Order parameters for C-H bond vectors in lipid bilayer systems, measured
+with 13C or 2H NMR techniques, give indirect information about structural
+sampling of indidual molecules \cite{ollila16}. The observed increase of
+acyl chain order parameters with added cholesterol in simulations and
+experiments can be explained by increased trans conformations in acyl chains \cite{??},
+which is suggested to play critical role in phase behaviour in PC lipid-cholesterol
+mixtures \cite{??}. Consequently, the correct cholesterol ordering effect is
+expected to be necessary condition for a model used to understand lipid-cholesterol
+phase behaviour.
+
+Acyl chain order parameters for pure 1-palmitoyl-2-oleoylphosphatidylcholine (POPC) bilayer
+and mixture with 50 mol\% of cholesterol from different simulations and experiments
+are shown in Fig. \ref{OrderParametersCHOL}. Phase separation is not observed for this system \cite{ferreira13,??},
+thus the intermolecular interactions are expected to have maximum effect in equimolar mixture.
+Experimental acyl chain order parameters are typically well reproduced in state of the art lipid models
+for pure lipid bilayers (for review see \cite{ollila16}). This is also mainly observed in the data
+presented here, except that CHARMM36 slightly overestimates the order parameters and MACROG model
+underestimates order parameters in the beginning of sn-1 chain. In equimolar mixtures with cholesterol
+all models overestimate the order parameters. For Berger/Holtje and MACROG models the overestimation is significant,
+while less severe for CHARMM36 and Slipid models.\\
+\todo{Is overestimation in CHARMM36 and Slipid significant or not?} \\
+\todo{Lipid14 results from recent article should be added in this figure} 
+\begin{figure*}[]
+  \centering
+  \includegraphics[width=17.2cm]{../FIGS/OrderParametersCHOL.eps}
+  \caption{\label{OrderParametersCHOL}
+    Order parameters from simulations and experiments for acyl chains of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC).
+  }
+\end{figure*}
+
+The order parameter changes as a function of cholesterol for each segment are shown in Fig.~\ref{OrderParametersCHOLchanges}
+(currently only sn-1). \\
+\todo{This figure should be finished and similar for sn-2 should be done as well}
+\begin{figure}[]
+  \centering
+  \includegraphics[width=8cm]{../FIGS/OrderParametersCHANGEScholSN1.eps}
+  \caption{\label{OrderParametersCHOLchanges}
+    Order parameter changes from simulations and experiments for each segment in sn-1 chain of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC) as a function of cholesterol concentration.}
+  
+\end{figure}
+
+\todo{Also experimental cholesterol order parameters are available. Maybe these should be calculated from simulations as well.}
+
+\subsection{Lipid bilayer dimensions and density profiles as a function of cholesterol}
+Cholesterol induced changes in lipid packing, thickness and density profiles are suggested
+to be relevant, for example, for membrane protein interactions and cellular membrane
+lateral organization \cite{??}. Experimental and simulation studies show that
+the cholesterol induces the so called ''condensing effect'', i.e. acyl chain ordering
+increases the membrane thickness and
+reduces the area per molecule in lipid bilayers \cite{??}. This is demonstrated
+from simulations in Fig. \ref{apls}, showing the area per PC headgroups and per
+total number of molecules as a function of cholesterol concentration from different
+models. All models show reduction of area per total amount of molecules, partly
+due to the smaller area covered by the cholesterol than lipids, but also because
+lipids ordered by cholesterol require less space. Due to the latter effect,
+the area per PC headgroup do not essentially increase up to the addition of
+$\sim$15 mol\% of cholesterol. \\
+\todo{Membrane thickness to be plotted as well.}
+\begin{figure}[]
+  \centering
+  \includegraphics[width=8cm]{../FIGS/apls.eps}
+  \caption{\label{apls}
+    Area per molecules calculated from different simulation models
+    as a function of cholesterol concentration.
+  }
+\end{figure}
+
+Bilayer dimensions are indirectly experimentally accessible by scattering methods 
+and have been widely used to validate lipid bilayer simulations \cite{??}. 
+While sophisticated models are applied to extract area per molecule and thicknes for single
+component lipid bilayers, the results for multicomponent systems are more difficult to interpret \cite{??}.
+In such case the validation can be done by comparing directly measurable form factors between
+simulations and experiments \cite{??}. If simulation reproduces the form factor, it can be also
+used to interpret the experiments.  The form factors from different simulation models with
+different cholesterol concentrations are compared to experimental data Fig.~\ref{FormFactors}. \\
+\todo{Discussion to be finished when the data is solid.}
+
+ \begin{figure}[]
+  \centering
+  \includegraphics[width=8cm]{../FIGS/FormFactors.eps}
+  \caption{\label{FormFactors}
+    Form factors from simulations and experiments.
+  }
+
+  \todo{Form factor calculation method should be double checked.}
+
+  \todo{Experimental form factor amplitudes are not scaled to match with simulations, as done usually}
+
+  \todo{Not all experimental and simulation data is here.}
+    
+\end{figure}
+
+
+
+\section{Conclusions}
+
+
+
 
 \section{Methods}
 
 \subsection{X-ray scattering experiments}
 
-
 SAXS data on POPC multilamellar vesicles (MLVs) at various cholesterol concentrations
 has been measured. Data have been obtained at the EMBL BioSAXS beamline (Hamburg) using 20 keV photons, T = 27°C. Data were analyzed in terms of the SDP-GAP model described in Heftberger et al., J. Appl. Cryst. 2013 and Heftberger et al. Biophys. J. 2015. Data from MLVs are a convolute of structure factor (the crystalline lattice) and form factor. By fitting the scattered intensity data we obtain both contributions. Here we posted only form factors (ASCII format). For information on the quality of the fit we also give plots of the fitted intensity data. The electron density profile has been modelled in terms of the SDP model (see papers by Kucerka and coworkers), that is volume distribution functions are modelled by individual Gaussians or error functions. Cholesterol is also accounted for by two Gaussians. This model has been proposed by Jianjun Pan (USF, Tampa, FL), but is to the best of our knowledge not published (see also PhD Thesis by Peter Heftberger). Additional figures show the volume distribution functions and the resulting electron density profiles.
 
 Authors to consult and potentially include in publications using this data: Peter Heftberger (peter.heftberger@gmx.at), Georg Pabst (georg.pabst@uni-graz.at)
+
 \subsection{Molecular dynamics simulations}
+
+Simulated systems are listed in Table \ref{systemsCHOL} and the full simulation
+details are given in references or in supplementary material.
+
 \begin{table*}[]
   \centering
   \caption{Simulated lipid bilayers containing cholesterol. The simulation file data sets marked with $^*$ include also part of the trajectory.
@@ -196,11 +301,11 @@ Authors to consult and potentially include in publications using this data: Pete
     \hline
     Berger-POPC-07~\cite{ollila07a}&   POPC &128 & 0 &0\% & 7290  & 298  & 270 & 240 & [\citenum{bergerFILESpopc}]$^*$ & [\citenum{ferreira15}] \\
     /H\"oltje-CHOL-13~\cite{holtje01,ferreira13}   &    & &  &   &   &  &  &  &  \\
-                               &   POPC &120 & 8 & 6\% &7290   & 298  & 100 & 80 & [\citenum{bergerFILESpopc7chol}]$^*$ & [\citenum{ferreira13}] \\
-                               &   POPC &110 & 18& 14\% & 8481  & 298  & 100 & 80 & [\citenum{bergerFILESpopc15chol}]$^*$ & [\citenum{ferreira13}]  \\
-                               &   POPC &84 & 44 & 34\%  & 6794   & 298  & 100 & 80 & [\citenum{bergerFILESpopc34chol}]$^*$ & [\citenum{ferreira13}] \\
-                               &   POPC &64 & 64 & 50\% & 10314  & 298  & 100 & 80 & [\citenum{bergerFILESpopc50chol}]$^*$ & [\citenum{ferreira13}] \\
-                               &   POPC &50 & 78 & 61\% & 5782   & 298  & 100 & 80 & [\citenum{bergerFILESpopc60chol}]$^*$ & [\citenum{ferreira13}] \\
+    &   POPC &120 & 8 & 6\% &7290   & 298  & 100 & 80 & [\citenum{bergerFILESpopc7chol}]$^*$ & [\citenum{ferreira13}] \\
+    &   POPC &110 & 18& 14\% & 8481  & 298  & 100 & 80 & [\citenum{bergerFILESpopc15chol}]$^*$ & [\citenum{ferreira13}]  \\
+    &   POPC &84 & 44 & 34\%  & 6794   & 298  & 100 & 80 & [\citenum{bergerFILESpopc34chol}]$^*$ & [\citenum{ferreira13}] \\
+    &   POPC &64 & 64 & 50\% & 10314  & 298  & 100 & 80 & [\citenum{bergerFILESpopc50chol}]$^*$ & [\citenum{ferreira13}] \\
+    &   POPC &50 & 78 & 61\% & 5782   & 298  & 100 & 80 & [\citenum{bergerFILESpopc60chol}]$^*$ & [\citenum{ferreira13}] \\
 CHARMM36\cite{klauda10,lim12}  & POPC   & 200& 0& 0\% & 9000  & 310  & ? & 100 & [\citenum{charmm36gromacs5chol0-30}]$^*$  &  SI   \\
                                & POPC   & 200& 22& 10\% & 9000  & 310  & ? & 100 & [\citenum{charmm36gromacs5chol0-30}]$^*$  &  SI   \\
                                & POPC   & 200& 50& 20\% & 9000  & 310  & ? & 100 & [\citenum{charmm36gromacs5chol0-30}]$^*$  &  SI   \\
@@ -225,61 +330,9 @@ Slipids\cite{jambeck12b,jambeck12,jambeck13b}  & POPC   & 200 & 0 & 0\%   & ?  &
 \end{table*} 
 
 
-\section{comparison of acyl chain order parameters between experiments and simulations}
-Order parameters from simulations and experiments for acyl chains of 1-palmitoyl-2-oleoylphosphatidylcholine (POPC)
-are shown in Fig. \ref{OrderParametersCHOL}.
- \begin{figure*}[]
-  \centering
-  \includegraphics[width=17.2cm]{../FIGS/OrderParametersCHOL.eps}
-
-  \caption{\label{OrderParametersCHOL}
-    Order parameters from simulations and experiments for acyl chains of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC).}
-
-  \todo{Why are the order parameters of CHARMM36 too large compared to simulations even without cholesterol? 
-    Discussion in https://github.com/NMRLipids/NmrLipidsCholXray/issues/4}  
-
-  \todo{Why there is decrease in order parameters towards beginning of acyl chain in MacRog model without cholesterol?}
-
-  \todo{Do the results suggests that condensation effect is too strong in MacRog and Berger models?
-  Discussion in https://github.com/NMRLipids/NmrLipidsCholXray/issues/5}
-\end{figure*}
-
-The order parameter changes as a function of cholesterol for each segment are shown in Fig.~\ref{OrderParametersCHOLchanges}
-(currently only sn-1).
-
- \begin{figure}[]
-  \centering
-  \includegraphics[width=8cm]{../FIGS/OrderParametersCHANGEScholSN1.eps}
-
-  \caption{\label{OrderParametersCHOLchanges}
-    Order parameter changes from simulations and experiments for each segment in sn-1 chain of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC) as a function of cholesterol concentration.}
-
-\end{figure}
-
-\newpage
-\section{Comparison of form factors between experiments and simulations}
-The form factors calculated from different simulations with different cholesterol content are shown in 
-Fig.~\ref{FormFactors}.
-
- \begin{figure}[]
-  \centering
-  \includegraphics[width=8cm]{../FIGS/FormFactors.eps}
-
-  \caption{\label{FormFactors}
-    Form factors from simulations and experiments.
-  }
-
-  \todo{Form factor calculation method should be double checked.}
-
-  \todo{Experimental form factor amplitudes are not scaled to match with simulations, as done usually}
-
-  \todo{Not all experimental and simulation data is here.}
-    
-\end{figure}
 
 
 
-\section{Conclusions}
 
 % Tables may be be put in the text as floats.
 % Here is an example of the general form of a table:
