@@ -1,0 +1,24 @@
+set size 1.0,0.5
+set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
+set output "../aplsCHANGE.eps"
+#set yrange [0:0.25] 
+#set xrange [-0.5:5.5] 
+set ytic 0.05
+set ylabel "Area per molecule or PC (nm^2)"
+set xlabel "[chol] (mol %)"
+#set xtics ("{/Symbol b}" 1, "{/Symbol a}" 2, "g_{3R}" 3, "g_{3S}" 4, "g_{2}" 5, "g_{1R}" 6, "g_{1S}" 7)
+#set xtics ("{/Symbol g}" 0, "{/Symbol b}" 1, "{/Symbol a}" 2, "g_{3}" 3, "g_{2}" 4, "g_{1}" 5)
+#set key box linestyle 1 linecolor rgb 'black'
+set key above maxcols 2 maxrows 5
+
+plot "../../DATA/aplCHARMM36_T310Kchange.dat" using 1:2  title 'CHARMM36 T=310K' with linespoints pt 5 ps 1.2 lc rgb 'blue',\
+     "../../DATA/aplCHARMM36_T310Kchange.dat" using 1:3 notitle with linespoints pt 4 ps 1.2 lc rgb 'blue',\
+     "../../DATA/aplSLIPID_T310Kchange.dat" using 1:2  title 'SLIPID T=310K' with linespoints pt 5 ps 1.2 lc rgb 'violet',\
+     "../../DATA/aplSLIPID_T310Kchange.dat" using 1:3 notitle with linespoints pt 4 ps 1.2 lc rgb 'violet',\
+     "../../DATA/aplSLIPID_T298Kchange.dat" using 1:2  title 'SLIPID T=298K' with linespoints pt 5 ps 1.2 lc rgb 'cyan',\
+     "../../DATA/aplSLIPID_T298Kchange.dat" using 1:3 notitle with linespoints pt 4 ps 1.2 lc rgb 'cyan',\
+     "../../DATA/aplBerger_T298Kchange.dat" using 1:2  title 'Berger T=298K' with linespoints pt 5 ps 1.2 lc rgb 'red',\
+     "../../DATA/aplBerger_T298Kchange.dat" using 1:3 notitle with linespoints pt 4 ps 1.2 lc rgb 'red',\
+     "../../DATA/aplMACROG_T310Kchange.dat" using 1:2  title 'MacRog T=310K' with linespoints pt 5 ps 1.2 lc rgb 'green',\
+     "../../DATA/aplMACROG_T310Kchange.dat" using 1:3 notitle with linespoints pt 4 ps 1.2 lc rgb 'green',\
+

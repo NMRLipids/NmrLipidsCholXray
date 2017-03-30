@@ -39,7 +39,7 @@
 % Multiple \preprint commands are allowed.
 %\preprint{}
 
-\title{Quantitative quality of lipid-cholesterol interactions in atomistic resolution molecular dynamics simulations} %Title of paper
+\title{NMRlipids III: Lipid-cholesterol interactions in atomistic resolution molecular dynamics simulations} %Title of paper
 
 % repeat the \author .. \affiliation  etc. as needed
 % \email, \thanks, \homepage, \altaffiliation all apply to the current author.
@@ -58,11 +58,15 @@
 \affiliation{University of Graz}
 
 \author{O. H. Samuli Ollila}
-\email[]{samuli.ollila@aalto.fi}
+\email[]{samuli.ollila@helsinki.fi}
 %\homepage[]{Your web page}
 %\thanks{}
 %\altaffiliation{}
-\affiliation{Aalto University}
+\affiliation{Institute of Organic Chemistry and Biochemistry,
+Academy of Sciences of the Czech Republic, 
+Prague 6, Czech Republic}
+\affiliation{Institute of Biotechnology, University of Helsinki}
+
 
 \author{Georg Pabst}
 \affiliation{University of Graz}
@@ -92,14 +96,17 @@ NMR and scattering data.
 \section{Introduction}
 Details of intermolecular interactions determine the phase
 behaviour and details lateral organization of lipid and bilayers
-containing cholesterol \cite{??}.
-Formation lateral heterogeneities \cite{??}, lipid rafts \cite{??}
-and superlattices \cite{??} in cellular membranes have been
+containing cholesterol \cite{ipsen87}.
+Formation lateral heterogeneities \cite{kinnunen91}, lipid rafts \cite{simons97}
+and superlattices \cite{somerharju09} in cellular membranes have been
 suggested to be driven by interactions between cholesterol
 and lipids. While detailed experimental information of these interactions
 is relatively sparse, atomistic resolution molecular dynamics simulations
 have been widely applied to give detailed explanations of lipid bilayer
-lateral organization and lipid-cholesterol interactions \cite{??}.
+lateral organization and lipid-cholesterol interactions \cite{rog14,sodt14,??}.
+However, the simulations must reproduce the measured details, like NMR
+order parameters and scattering form factors, to be useful in intepretation
+of molecular details in lipid bilayer mixtures.
 
 Simulations qualitatively reproduce the cholesterol condensation effect,
 but quantitatve comparison to robust experimental data has not been
@@ -108,7 +115,7 @@ systematic experimental data sets for the comparison and partly
 due to the lack of protocols for validating intermolecular interactions
 in lipid bilayer simulations against experiments.
 Scattering experiments are more difficult to interpret for
-mixed lipid bilayers than for single component bilayers \cite{??},
+mixed lipid bilayers than for single component bilayers \cite{pan12,Heftberger15,Marquardt15,??},
 thus area per molecule values, one of the main quantity used to
 compare simulations to experiments, have not been
 available for lipid cholesterol mixtures. Systematic experimental
@@ -122,7 +129,7 @@ of systematically measured C-H bond order parameter and scattering form
 factor data can be used to validate the quality of lipid-cholesterol
 intermolecular interactions MD simulations. MD simulations can be also
 potentially used to give structural interpretation for form factor
-measured from mixed systems, which is a major challenge for current methods \cite{??}. 
+measured from mixed systems, which is a major challenge for current methods \cite{pan12,Heftberger15,Marquardt15,??}. 
 The approach should be also applicable for mixed lipid bilayers with
 other than lipid-cholesterol mixtures.
 
@@ -170,18 +177,18 @@ other than lipid-cholesterol mixtures.
 
 \subsection{Structural sampling of molecules in bilayers with cholesterol}
 Order parameters for C-H bond vectors in lipid bilayer systems, measured
-with 13C or 2H NMR techniques, give indirect information about structural
+with $^{13}$C or $^{2}$H NMR techniques, give indirect information about structural
 sampling of indidual molecules \cite{ollila16}. The observed increase of
 acyl chain order parameters with added cholesterol in simulations and
-experiments can be explained by increased trans conformations in acyl chains \cite{??},
+experiments can be explained by increased trans conformations in acyl chains \cite{ferreira13,??},
 which is suggested to play critical role in phase behaviour in PC lipid-cholesterol
-mixtures \cite{??}. Consequently, the correct cholesterol ordering effect is
+mixtures \cite{ipsen87}. Consequently, the correct cholesterol ordering effect is
 expected to be necessary condition for a model used to understand lipid-cholesterol
 phase behaviour.
 
 Acyl chain order parameters for pure 1-palmitoyl-2-oleoylphosphatidylcholine (POPC) bilayer
 and mixture with 50 mol\% of cholesterol from different simulations and experiments
-are shown in Fig. \ref{OrderParametersCHOL}. Phase separation is not observed for this system \cite{ferreira13,??},
+are shown in Fig. \ref{OrderParametersCHOL}. Phase separation is not observed for this system \cite{ionova12,ferreira13},
 thus the intermolecular interactions are expected to have maximum effect in equimolar mixture.
 Experimental acyl chain order parameters are typically well reproduced in state of the art lipid models
 for pure lipid bilayers (for review see \cite{ollila16}). This is also mainly observed in the data
@@ -232,16 +239,19 @@ $\sim$15 mol\% of cholesterol. \\
   \includegraphics[width=8cm]{../FIGS/apls.eps}
   \caption{\label{apls}
     Area per molecules calculated from different simulation models
-    as a function of cholesterol concentration.
+    as a function of cholesterol concentration. Solid marks are area per
+    total amount of molecules (chol+PC) and empty marks are area per PC headgroups.
+    Top figure shows absolute values and bottom figure shows changes respect
+    to pure lipid system.
   }
 \end{figure}
 
 Bilayer dimensions are indirectly experimentally accessible by scattering methods 
-and have been widely used to validate lipid bilayer simulations \cite{??}. 
+and have been widely used to validate lipid bilayer simulations \cite{ollila16,??}. 
 While sophisticated models are applied to extract area per molecule and thicknes for single
-component lipid bilayers, the results for multicomponent systems are more difficult to interpret \cite{??}.
+component lipid bilayers, the results for multicomponent systems are more difficult to interpret \cite{pan12,Heftberger15,Marquardt15,??}.
 In such case the validation can be done by comparing directly measurable form factors between
-simulations and experiments \cite{??}. If simulation reproduces the form factor, it can be also
+simulations and experiments. If simulation reproduces the form factor, it can be also
 used to interpret the experiments.  The form factors from different simulation models with
 different cholesterol concentrations are compared to experimental data Fig.~\ref{FormFactors}. \\
 \todo{Discussion to be finished when the data is solid.}
@@ -265,7 +275,9 @@ different cholesterol concentrations are compared to experimental data Fig.~\ref
 
 \section{Conclusions}
 
-
+Cholesterol ordering effect is overestimated in Berger/Holtje and MacRog models.
+Slight overestimation is observed also in CHARMM36 and Slipid models, but more
+careful analysis is required to conclude if this is significant or not.
 
 
 \section{Methods}
@@ -365,7 +377,13 @@ all the details are not quite understood. In this work we use
 the results from Gromacs 5 with settings suggested to be optimal
 by Gromacs webpage. We also compared the results from Gromacs 5 with
 these settings to the results simulated with NAMD, OpenMM and literature
-values. The comparison is shown in Fig. \ref{programsCOMP}
+values. Based on comparison shown in Fig. \ref{programsCOMP}, we conclude
+that Gromacs 5 with settings suggested in webpage gives consistent
+results with the literature and other simulation packages. Thus these
+results are used in the main body of the paper. However, order parameters
+are slightly overestimated respected to the experiments also with these
+settings. \\
+\todo{Should be extend this discussion based on discussion at  https://github.com/NMRLipids/NmrLipidsCholXray/issues/4 ?}
  \begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../FIGS/OrderParametersPROGRAMS.eps}
