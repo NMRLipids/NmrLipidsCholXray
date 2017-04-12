@@ -111,20 +111,20 @@ NMR and scattering data.
 \section{Introduction}
 Details of intermolecular interactions determine the phase
 behaviour and details lateral organization of lipid and bilayers
-containing cholesterol \cite{ipsen87}.
-Formation lateral heterogeneities \cite{kinnunen91}, lipid rafts \cite{simons97}
+containing cholesterol \cite{ipsen87}.~\todo{Fix Ole's name among the authors of this paper.}
+Formation of lateral heterogeneities \cite{kinnunen91}, lipid rafts \cite{simons97}
 and superlattices \cite{somerharju09} in cellular membranes have been
 suggested to be driven by interactions between cholesterol
 and lipids. While detailed experimental information of these interactions
 is relatively sparse, atomistic resolution molecular dynamics simulations
 have been widely applied to give detailed explanations of lipid bilayer
 lateral organization and lipid-cholesterol interactions \cite{rog14,sodt14,??}.
-However, the simulations must reproduce the measured details, like NMR
+However, the simulations must reproduce the measured experimental details, such as NMR
 order parameters and scattering form factors, to be useful in intepretation
 of molecular details in lipid bilayer mixtures.
 
 Simulations qualitatively reproduce the cholesterol condensation effect,
-but quantitatve comparison to robust experimental data has not been
+but quantitative comparison to robust experimental data has not been
 typically done. This is partly due to the lack of availability of
 systematic experimental data sets for the comparison and partly
 due to the lack of protocols for validating intermolecular interactions
@@ -137,16 +137,17 @@ available for lipid cholesterol mixtures. Systematic experimental
 data set for lipid C-H bond order parameters with different cholesterol
 concentrations in POPC bilayer has been published only relatively recently \cite{ferreira13}.
 
-In this work we present also the experimental scattering form factor
+In this work we present the experimental scattering form factor
 data for POPC-cholesterol mixtures by systematically increasing the
-cholesterol concentration. Our goal is to show that the combination
-of systematically measured C-H bond order parameter and scattering form
-factor data can be used to validate the quality of lipid-cholesterol
-intermolecular interactions MD simulations. MD simulations can be also
-potentially used to give structural interpretation for form factor
+cholesterol concentration, scanning the same concentrations that were previously studied with ssNMR~\cite{ferreira13}.
+Our goal is to show that the combination
+of systematically measured C--H bond order parameter and scattering form
+factor data can be used to validate the quality of lipid--cholesterol
+intermolecular interactions in MD simulations. MD simulations can be also
+potentially used to give structural interpretation for form factors
 measured from mixed systems, which is a major challenge for current methods \cite{pan12,Heftberger15,Marquardt15,??}. 
 The approach should be also applicable for mixed lipid bilayers with
-other than lipid-cholesterol mixtures.
+other than lipid--cholesterol mixtures.
 
 
 
@@ -192,24 +193,24 @@ other than lipid-cholesterol mixtures.
 
 \subsection{Structural sampling of molecules in bilayers with cholesterol}
 Order parameters for C-H bond vectors in lipid bilayer systems, measured
-with $^{13}$C or $^{2}$H NMR techniques, give indirect information about structural
+with $^{13}$C or $^{2}$H NMR techniques, give indirect information about the structural
 sampling of indidual molecules \cite{ollila16}. The observed increase of
 acyl chain order parameters with added cholesterol in simulations and
 experiments can be explained by increased trans conformations in acyl chains \cite{ferreira13,??},
-which is suggested to play critical role in phase behaviour in PC lipid-cholesterol
+which is suggested to play critical role in the phase behaviour of PC-lipid--cholesterol
 mixtures \cite{ipsen87}. Consequently, the correct cholesterol ordering effect is
-expected to be necessary condition for a model used to understand lipid-cholesterol
+expected to be a necessary condition for a model used to understand lipid--cholesterol
 phase behaviour.
 
 Acyl chain order parameters for pure 1-palmitoyl-2-oleoylphosphatidylcholine (POPC) bilayer
 and mixture with 50 mol\% of cholesterol from different simulations and experiments
 are shown in Fig. \ref{OrderParametersCHOL}. Phase separation is not observed for this system \cite{ionova12,ferreira13},
 thus the intermolecular interactions are expected to have maximum effect in equimolar mixture.
-Experimental acyl chain order parameters are typically well reproduced in state of the art lipid models
+Experimental acyl chain order parameters are typically well reproduced in the state of the art lipid models
 for pure lipid bilayers (for review see \cite{ollila16}). This is also mainly observed in the data
 presented here, except that CHARMM36 slightly overestimates the order parameters and MACROG model
 underestimates order parameters in the beginning of sn-1 chain. In equimolar mixtures with cholesterol
-all models overestimate the order parameters. For Berger/Holtje and MACROG models the overestimation is significant,
+all models overestimate the order parameters. For Berger/H\"oltje and MACROG models the overestimation is significant,
 while less severe for CHARMM36 and Slipid models.\\
 \todo{Is overestimation in CHARMM36 and Slipid significant or not?} \\
 \todo{Lipid14 results from recent article should be added in this figure} 
@@ -246,7 +247,7 @@ total number of molecules as a function of cholesterol concentration from differ
 models. All models show reduction of area per total amount of molecules, partly
 due to the smaller area covered by the cholesterol than lipids, but also because
 lipids ordered by cholesterol require less space. Due to the latter effect,
-the area per PC headgroup do not essentially increase up to the addition of
+the area per PC headgroup does not essentially increase up to the addition of
 $\sim$15 mol\% of cholesterol. \\
 \todo{Membrane thickness to be plotted as well.}
 \begin{figure}[]
@@ -254,8 +255,8 @@ $\sim$15 mol\% of cholesterol. \\
   \includegraphics[width=8cm]{../FIGS/apls.eps}
   \caption{\label{apls}
     Area per molecules calculated from different simulation models
-    as a function of cholesterol concentration. Solid marks are area per
-    total amount of molecules (chol+PC) and empty marks are area per PC headgroups.
+    as a function of cholesterol concentration. The solid symbols are area per
+    total amount of molecules (chol+PC) and the empty symbols area per PC headgroups.
     Top figure shows absolute values and bottom figure shows changes respect
     to pure lipid system.
   }
@@ -268,7 +269,7 @@ component lipid bilayers, the results for multicomponent systems are more diffic
 In such case the validation can be done by comparing directly measurable form factors between
 simulations and experiments. If simulation reproduces the form factor, it can be also
 used to interpret the experiments.  The form factors from different simulation models with
-different cholesterol concentrations are compared to experimental data Fig.~\ref{FormFactors}. \\
+different cholesterol concentrations are compared to experimental data in Fig.~\ref{FormFactors}. \\
 \todo{Discussion to be finished when the data is solid.}
 
  \begin{figure}[]
@@ -387,10 +388,10 @@ Slipids\cite{jambeck12b,jambeck12,jambeck13b}  & POPC   & 200 & 0 & 0\%   & ?  &
 The results from CHARMM36 model for lipid bilayers from different 
 simulation packages have been reported to give different results in
 the literature \cite{piggot12,lee16}. The results are mainly
-dependent on different Lennart-Jones cut--off settings, but
+dependent on different Lennard-Jones cut-off settings, but
 all the details are not quite understood. In this work we use
 the results from Gromacs 5 with settings suggested to be optimal
-by Gromacs webpage. We also compared the results from Gromacs 5 with
+by Gromacs webpage.~\todo{List these settings here or in SI.} We also compared the results from Gromacs 5 with
 these settings to the results simulated with NAMD, OpenMM and literature
 values. Based on comparison shown in Fig. \ref{programsCOMP}, we conclude
 that Gromacs 5 with settings suggested in webpage gives consistent
