@@ -1,0 +1,48 @@
+#set term postscript enhanced color  
+set encoding iso_8859_1 
+set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
+set output "../densitiesEXTREMES.eps"
+set size 1.0, 1.2
+set multiplot  layout 2,1
+set xrange [-3.5:3.5] 
+#set ytic 0.03
+#set key above
+set key at screen 0.8,screen 1.1 maxcols 2 maxrows 3
+set key font ",13"
+
+
+#set title "POPC"
+#set yrange [0:0.42]
+#set origin 0,0.35
+
+set xtics format " "
+
+set ylabel "e/nm^3"
+set label 100 "0% cholesterol" at graph 0.4,0.85 #font ",18"
+#set size 1.0, 0.17
+plot  "../../../MATCH/Data/Lipid_Bilayers/POPC/T298K/MODEL_Berger/Electron_Density_From_Simulation.dat" using 1:2 title 'Berger' with lines linetype 1 lw 2 lc rgb 'red',\
+      "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_CHARMM36_GROMACS5.1.2/Electron_Density_From_Simulation.dat" using ($1+0.15):2 title 'CHARMM 36 (T=303K)' with lines linetype 1 lw 2 lc rgb 'blue',\
+      "../../../MATCH/Data/Lipid_Bilayers/POPC/T298K/MODEL_SLIPIDS/Electron_Density_From_Simulation.dat" using ($1+0.05):2 title 'SLIPIDS (T=298K)' with lines linetype 1 lw 2 lc rgb 'violet',\
+      "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_MACROG/Electron_Density_From_Simulation.dat" using ($1-0.1):2 title 'MacRog (T=310K)' with lines linetype 1 lw 2 lc rgb 'green',\
+      "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/Electron_Density_From_Experiments.dat" using ($1/10):($2*1000) title 'Experiments' with lines linetype 1 lw 2 lc rgb 'black'
+#      "../../../MATCH/Data/Lipid_Bilayers/POPC/T300K/MODEL_CHARMM36/ANALYSISdirectory/Form_Factor_From_SimulationTST.dat" using 1:2 title 'CHARMM 36' with lines linetype 1 lc rgb 'blue',\
+
+set xtics format "%g"
+set xlabel "nm"
+set label 100 "50% cholesterol" at graph 0.4,0.85 #font ",18"
+#set size 1.0, 0.17
+plot  "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_Berger/Electron_Density_From_Simulation.dat" using ($1+0.1):2 notitle with lines linetype 1 lw 2 lc rgb 'red',\
+      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T310K/MODEL_SLIPIDS/Electron_Density_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lw 2 lc rgb 'violet',\
+      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/Electron_Density_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lw 2 lc rgb 'violet',\
+      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T310K/MODEL_CHARMM36_GROMACS5.0/Electron_Density_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lw 2 lc rgb 'blue',\
+      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T310K/MODEL_MACROG/Electron_Density_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lw 2 lc rgb 'green',\
+      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T300K/Electron_Density_From_Experiments.dat" using ($1/10):($2*1000) notitle with lines linetype 1 lw 2 lc rgb 'black'
+#      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T303K/MODEL_CHARMM36_GROMACS4.5/Form_Factor_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lc rgb 'blue',\
+#      "../../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/Form_Factor_From_Simulation.dat" using 1:2 notitle with lines linetype 1 lc rgb 'violet',\
+
+
+ 
+
+
+unset multiplot
+
