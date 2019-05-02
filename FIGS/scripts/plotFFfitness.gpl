@@ -16,14 +16,15 @@ set size 1.0, 1.0
 
 #set xtics format " "
 
-#set ylabel "C_2"
+set ylabel "Form factor fitness"
+set xlabel "Cholesterol mol %"
 #set origin 0,14*0.103
 #set size 1.0, 0.165
 plot   "../../DATA/FFfitnessCHARMM.dat" using 1:2 title 'CHARMM' with linespoints  linetype 1 pt 5 lc rgb 'blue',\
        "../../DATA/FFfitnessSLIPIDS.dat" using 1:2 title 'Slipids' with linespoints  linetype 1 pt 5 lc rgb 'pink',\
+       "../../DATA/FFfitnessBERGER.dat" using 1:2 title 'Berger' with linespoints  linetype 1 pt 5 lc rgb 'red',\
+       "../../DATA/FFfitnessMACROG.dat" using 1:2 title 'MacRog' with linespoints  linetype 1 pt 5 lc rgb 'green',\
      
-
-
 
 #unset multiplot
 

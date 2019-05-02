@@ -5,3 +5,11 @@ grep 'fitness from FF' /home/local/osollila/NMRlipids/MATCH/Data/Lipid_Bilayers/
 rm  ../DATA/FFfitnessCHARMM.dat
 grep 'fitness from FF' /home/local/osollila/NMRlipids/MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_CHARMM36_GROMACS5.0/fitness.txt | awk '{print 0"   "$4}'  >> ../DATA/FFfitnessCHARMM.dat
 grep 'fitness from FF' /home/local/osollila/NMRlipids/MATCH/Data/Lipid_Bilayers/POPC+50%chol/T310K/MODEL_CHARMM36_GROMACS5.0/fitness.txt | awk '{print 50"   "$4}' >> ../DATA/FFfitnessCHARMM.dat
+
+rm  ../DATA/FFfitnessBERGER.dat
+grep 'fitness from FF' /home/local/osollila/NMRlipids/MATCH/Data/Lipid_Bilayers/POPC/T298K/MODEL_Berger/fitness.txt | awk '{print 0"   "$4}'  >> ../DATA/FFfitnessBERGER.dat
+grep 'fitness from FF' /home/local/osollila/NMRlipids/MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_Berger/fitness.txt | awk '{print 50"   "$4}' >> ../DATA/FFfitnessBERGER.dat
+
+rm  ../DATA/FFfitnessMACROG.dat
+grep 'fitness from FF' /home/local/osollila/NMRlipids/MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_MACROG/fitness.txt | awk '{print 0"   "$4}'  >> ../DATA/FFfitnessMACROG.dat
+grep 'fitness from FF' /home/local/osollila/NMRlipids/MATCH/Data/Lipid_Bilayers/POPC+50%chol/T310K/MODEL_MACROG/fitness.txt | awk '{print 50"   "$4}' >> ../DATA/FFfitnessMACROG.dat
