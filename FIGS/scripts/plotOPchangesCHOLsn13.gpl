@@ -1,0 +1,40 @@
+#set term postscript enhanced color  
+set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
+set output "../OrderParametersCHANGEScholSN13.eps"
+set size 2.0, 2.0
+#set multiplot  layout 15,1
+set xrange [0:50]
+set yrange [0:0.4] 
+#set key above
+#set key font ",13"
+
+#set label 100 "sn-1" at graph 0.05,0.85 font ",18"
+#set title "POPC"
+
+#set yrange [0.15:0.39]
+#set ytic 0.05
+
+#set xtics format " "
+
+#set ylabel "C_2"
+#set origin 0,14*0.103
+#set size 1.0, 0.165
+plot   "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($2) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($1*0.0014133420175518154+0.21091840522709515) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($3) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($4) title 'Experiments' with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($5) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($6) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($7) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($8) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($9) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($10) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($11) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($12) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($13) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($14) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($15) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+#       "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt" using 1:($16) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
+
+#unset multiplot
+
