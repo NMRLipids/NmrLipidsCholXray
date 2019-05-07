@@ -28,17 +28,19 @@
 #psc -r < ../DATA/OPcholCHARMM36sn-1_1.dat | sc -W% - > ../DATA/OPcholCHARMM36sn-1_1transpose.dat
 
 #SLIPIDS T310K
-#POPCsn1DATA=../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
-#POPCchol10percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+10%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
-#POPCchol20percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+20%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
-#POPCchol30percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+30%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
-#paste $POPCsn1DATA $POPCchol10percSN1data $POPCchol20percSN1data $POPCchol30percSN1data | awk 'BEGIN{print "0  10  20   30"}{if(NR>1)print $2"   "$5"   "$8"   "$11}' > ../DATA/OPcholSLIPIDsn-1_1.dat
-#psc -r < ../DATA/OPcholSLIPIDsn-1_1.dat | sc -W% - > ../DATA/OPcholSLIPIDsn-1_1transpose.dat
+POPCsn1DATA=../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+POPCchol10percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+10%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+POPCchol20percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+20%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+POPCchol30percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+30%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+POPCchol40percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+40%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+POPCchol50percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+40%chol/T310K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+paste $POPCsn1DATA $POPCchol10percSN1data $POPCchol20percSN1data $POPCchol30percSN1data  $POPCchol40percSN1data   $POPCchol50percSN1data | awk 'BEGIN{print "0  10  20   30   40   50"}{if(NR>1)print $2"   "$5"   "$8"   "$11"   "$14"    "$17}' > ../DATA/OPcholSLIPIDT310Ksn-1_1.dat
+psc -r < ../DATA/OPcholSLIPIDT310Ksn-1_1.dat | sc -W% - > ../DATA/OPcholSLIPIDT310Ksn-1_1transpose.dat
 
 #SLIPIDS
-POPCsn1DATA=../../MATCH/Data/Lipid_Bilayers/POPC/T298K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
-POPCchol30percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+30%chol/T298K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
-POPCchol50percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+#POPCsn1DATA=../../MATCH/Data/Lipid_Bilayers/POPC/T298K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+#POPCchol30percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+30%chol/T298K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
+#POPCchol50percSN1data=../../MATCH/Data/Lipid_Bilayers/POPC+50%chol/T298K/MODEL_SLIPIDS/sn-1_Order_Parameters_Simulation.dat
 #paste $POPCsn1DATA $POPCchol30percSN1data $POPCchol50percSN1data | awk 'BEGIN{print "0  30  50"}{if(NR>1)print $2"   "$5"   "$8}' > ../DATA/OPcholSLIPIDsn-1_1.dat
-paste $POPCchol30percSN1data $POPCchol50percSN1data | awk 'BEGIN{print "0  30  50"}{if(NR>1)print "nan   "$2"   "$5}' > ../DATA/OPcholSLIPIDsn-1_1.dat
-psc -r < ../DATA/OPcholSLIPIDsn-1_1.dat | sc -W% - > ../DATA/OPcholSLIPIDsn-1_1transpose.dat
+##paste $POPCchol30percSN1data $POPCchol50percSN1data | awk 'BEGIN{print "0  30  50"}{if(NR>1)print "nan   "$2"   "$5}' > ../DATA/OPcholSLIPIDsn-1_1.dat
+#psc -r < ../DATA/OPcholSLIPIDsn-1_1.dat | sc -W% - > ../DATA/OPcholSLIPIDsn-1_1transpose.dat

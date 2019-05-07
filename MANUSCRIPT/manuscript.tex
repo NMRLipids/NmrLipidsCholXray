@@ -152,10 +152,6 @@ measured from mixed systems, which is a major challenge for current methods \cit
 The approach should be also applicable for mixed lipid bilayers with
 other than lipid--cholesterol mixtures.
 
-
-
-
-
 %Importance of phospholipid cholesterol interactions in cellular membranes
 %have been reckognized for long time \cite{??}. Various ideas about 
 %lateral heterogeneities driven interactions between cholesterol, phosphatidylcholine
@@ -238,9 +234,11 @@ The order parameter changes as a function of cholesterol for each segment are sh
 \todo{This figure should be finished and similar for sn-2 should be done as well}
 \begin{figure}[]
   \centering
-  \includegraphics[width=8cm]{../FIGS/OrderParametersCHANGEScholSN1.eps}
+  \includegraphics[width=8cm]{../FIGS/slopes.eps}
   \caption{\label{OrderParametersCHOLchanges}
-    Order parameter changes from simulations and experiments for each segment in sn-1 chain of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC) as a function of cholesterol concentration.}
+    Slopes of order parameters as a function of cholesterol.
+    %Order parameter changes from simulations and experiments for each segment in sn-1 chain of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC) as a function of cholesterol concentration.
+  }
   
 \end{figure}
 
@@ -324,7 +322,7 @@ careful analysis is required to conclude if this is significant or not.
 \subsection{X-ray scattering experiments}
 
 SAXS data on POPC multilamellar vesicles (MLVs) at various cholesterol concentrations
-has been measured. Data have been obtained at the EMBL BioSAXS beamline (Hamburg) using 20 keV photons, T = 27°C. Data were analyzed in terms of the SDP-GAP model described in Heftberger et al., J. Appl. Cryst. 2013 and Heftberger et al. Biophys. J. 2015. Data from MLVs are a convolute of structure factor (the crystalline lattice) and form factor. By fitting the scattered intensity data we obtain both contributions. Here we posted only form factors (ASCII format). For information on the quality of the fit we also give plots of the fitted intensity data. The electron density profile has been modelled in terms of the SDP model (see papers by Kucerka and coworkers), that is volume distribution functions are modelled by individual Gaussians or error functions. Cholesterol is also accounted for by two Gaussians. This model has been proposed by Jianjun Pan (USF, Tampa, FL), but is to the best of our knowledge not published (see also PhD Thesis by Peter Heftberger). Additional figures show the volume distribution functions and the resulting electron density profiles.
+has been measured. Data have been obtained at the EMBL BioSAXS beamline (Hamburg) using 20 keV photons, T = 27$^\circ$C. Data were analyzed in terms of the SDP-GAP model described in Heftberger et al., J. Appl. Cryst. 2013 and Heftberger et al. Biophys. J. 2015. Data from MLVs are a convolute of structure factor (the crystalline lattice) and form factor. By fitting the scattered intensity data we obtain both contributions. Here we posted only form factors (ASCII format). For information on the quality of the fit we also give plots of the fitted intensity data. The electron density profile has been modelled in terms of the SDP model (see papers by Kucerka and coworkers), that is volume distribution functions are modelled by individual Gaussians or error functions. Cholesterol is also accounted for by two Gaussians. This model has been proposed by Jianjun Pan (USF, Tampa, FL), but is to the best of our knowledge not published (see also PhD Thesis by Peter Heftberger). Additional figures show the volume distribution functions and the resulting electron density profiles.
 
 Authors to consult and potentially include in publications using this data: Peter Heftberger (peter.heftberger@gmx.at), Georg Pabst (georg.pabst@uni-graz.at)
 
@@ -432,6 +430,60 @@ settings. \\
     Discussion going on at {\it https://github.com/NMRLipids/NmrLipidsCholXray/issues/4}.
   }
 \end{figure}
+
+\section{Order parameter splopes as a function of cholesterol}
+ \begin{figure*}[]
+  \centering
+  \includegraphics[width=19cm]{../FIGS/slopesEXPERIMENT.pdf}
+  \caption{\label{programsCOMP}
+    Slopes of order parameters as a function of cholesterol from experiments \cite{ferreira13}.
+  }
+\end{figure*}
+
+ \begin{figure*}[]
+  \centering
+  \includegraphics[width=19cm]{../FIGS/slopesBERGER.pdf}
+  \caption{\label{programsCOMPberger}
+    Slopes of order parameters as a function of cholesterol from Berger simulations.
+  }
+\end{figure*}
+
+ \begin{figure*}[]
+  \centering
+  \includegraphics[width=19cm]{../FIGS/slopesCHARMM.pdf}
+  \caption{\label{programsCOMPcharmm}
+    Slopes of order parameters as a function of cholesterol from CHARMM36 simulations.
+  }
+\end{figure*}
+ \begin{figure*}[]
+  \centering
+  \includegraphics[width=19cm]{../FIGS/slopesMACROG.pdf}
+  \caption{\label{programsCOMPmacrog}
+    Slopes of order parameters as a function of cholesterol from MacRog simulations.
+  }
+\end{figure*}
+ \begin{figure*}[]
+  \centering
+  \includegraphics[width=19cm]{../FIGS/slopesSLIPIDS.pdf}
+  \caption{\label{programsCOMPslipids}
+    Slopes of order parameters as a function of cholesterol from Slipids simulations.
+  }
+\end{figure*}
+ \begin{figure*}[]
+  \centering
+  \includegraphics[width=19cm]{../FIGS/slopesSLIPIDST310K.pdf}
+  \caption{\label{programsCOMPslipids310K}
+    Slopes of order parameters as a function of cholesterol from Slipids simulations at 298 K.
+  }
+\end{figure*}
+
+% \begin{figure}[]
+%  \centering
+%  \includegraphics[width=8cm]{../FIGS/slopesBERGER.pdf}
+%  \caption{\label{programsCOMP}
+%    Slopes of order parameters as a function of cholesterol from Berger simulations.
+%  }
+%\end{figure}
 
 % Create the reference section using BibTe
 \bibliography{refs.bib}

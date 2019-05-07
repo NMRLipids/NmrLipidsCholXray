@@ -2,7 +2,7 @@
 set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
 set output "../FFfitness.eps"
 set size 1.0, 1.0
-#set multiplot  layout 15,1
+set multiplot  layout 5,1
 #set xrange [0:50]
 #set yrange [0:0.4] 
 #set key above
@@ -16,15 +16,43 @@ set size 1.0, 1.0
 
 #set xtics format " "
 
+set key at graph 0.35,0.9
 set ylabel "Form factor fitness"
-set xlabel "Cholesterol mol %"
 #set origin 0,14*0.103
 #set size 1.0, 0.165
 plot   "../../DATA/FFfitnessCHARMM.dat" using 1:2 title 'CHARMM' with linespoints  linetype 1 pt 5 lc rgb 'blue',\
        "../../DATA/FFfitnessSLIPIDS.dat" using 1:2 title 'Slipids' with linespoints  linetype 1 pt 5 lc rgb 'pink',\
        "../../DATA/FFfitnessBERGER.dat" using 1:2 title 'Berger' with linespoints  linetype 1 pt 5 lc rgb 'red',\
        "../../DATA/FFfitnessMACROG.dat" using 1:2 title 'MacRog' with linespoints  linetype 1 pt 5 lc rgb 'green',\
-     
 
-#unset multiplot
+set yrange [0:0.03]
+set ylabel "Headgroup"
+plot   "../../DATA/HGfitnessCHARMM.dat" using 1:2 notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/HGfitnessSLIPIDS.dat" using 1:2 notitle  with linespoints  linetype 1 pt 5 lc rgb 'pink',\
+       "../../DATA/HGfitnessBERGER.dat" using 1:2 title 'Berger' with linespoints  linetype 1 pt 5 lc rgb 'red',\
+       "../../DATA/HGfitnessMACROG.dat" using 1:2 title 'MacRog' with linespoints  linetype 1 pt 5 lc rgb 'green',\
+
+set yrange [0:0.21]
+set ylabel "Glycerol backbone"
+plot   "../../DATA/GLYfitnessCHARMM.dat" using 1:2 notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/GLYfitnessSLIPIDS.dat" using 1:2 notitle with linespoints  linetype 1 pt 5 lc rgb 'pink',\
+       "../../DATA/GLYfitnessBERGER.dat" using 1:2 title 'Berger' with linespoints  linetype 1 pt 5 lc rgb 'red',\
+       "../../DATA/GLYfitnessMACROG.dat" using 1:2 title 'MacRog' with linespoints  linetype 1 pt 5 lc rgb 'green',\
+
+set yrange [0:0.03]
+set ylabel "Sn-1"
+plot   "../../DATA/SN1fitnessCHARMM.dat" using 1:2 notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/SN1fitnessSLIPIDS.dat" using 1:2 notitle with linespoints  linetype 1 pt 5 lc rgb 'pink',\
+       "../../DATA/SN1fitnessBERGER.dat" using 1:2 title 'Berger' with linespoints  linetype 1 pt 5 lc rgb 'red',\
+       "../../DATA/SN1fitnessMACROG.dat" using 1:2 title 'MacRog' with linespoints  linetype 1 pt 5 lc rgb 'green',\
+
+set yrange [0:0.03]
+set ylabel "Sn-2"
+set xlabel "Cholesterol mol %"
+plot   "../../DATA/SN2fitnessCHARMM.dat" using 1:2 notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/SN2fitnessSLIPIDS.dat" using 1:2 notitle with linespoints  linetype 1 pt 5 lc rgb 'pink',\
+       "../../DATA/SN2fitnessBERGER.dat" using 1:2 title 'Berger' with linespoints  linetype 1 pt 5 lc rgb 'red',\
+       "../../DATA/SN2fitnessMACROG.dat" using 1:2 title 'MacRog' with linespoints  linetype 1 pt 5 lc rgb 'green',\
+       
+unset multiplot
 

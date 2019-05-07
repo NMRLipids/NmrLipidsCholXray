@@ -16,13 +16,17 @@ set size 1.0, 1.0
 
 #set xtics format " "
 
-#set ylabel "C_2"
+set key at graph 0.7,0.4
+set ylabel "Order parameter slope k_{OP}"
+set xlabel "Sn-1 carbon"
 #set origin 0,14*0.103
 #set size 1.0, 0.165
-plot   "../../DATA/expSLOPES.dat" using 1:($2) notitle with linespoints  linetype 1 pt 5 lc rgb 'black',\
-       "../../DATA/bergerSLOPES.dat" using 1:(sqrt($2**2)) notitle with linespoints  linetype 1 pt 5 lc rgb 'red',\
-       "../../DATA/charmmSLOPES.dat" using 1:(sqrt($2**2)) notitle with linespoints  linetype 1 pt 5 lc rgb 'blue',\
-       "../../DATA/macrogSLOPES.dat" using 1:(sqrt($2**2)) notitle with linespoints  linetype 1 pt 5 lc rgb 'pink',\
+plot   "../../DATA/expSLOPES.dat" using 1:($2) title 'Experiment T300K' with linespoints  linetype 1 pt 5 lc rgb 'black',\
+       "../../DATA/bergerSLOPES.dat" using 1:(sqrt($2**2)) title 'Berger T298K' with linespoints  linetype 1 pt 5 lc rgb 'red',\
+       "../../DATA/charmmSLOPES.dat" using 1:(sqrt($2**2)) title 'Charmm36 T310K' with linespoints  linetype 1 pt 5 lc rgb 'blue',\
+       "../../DATA/macrogSLOPES.dat" using 1:(sqrt($2**2)) title 'MacRog T310K' with linespoints  linetype 1 pt 5 lc rgb 'green',\
+       "../../DATA/slipidsSLOPES.dat" using 1:(sqrt($2**2)) title 'Slipids T298K' with linespoints  linetype 1 pt 5 lc rgb 'pink',\
+       "../../DATA/slipidsT310KSLOPES.dat" using 1:(sqrt($2**2)) title 'Slipids T310K' with linespoints  linetype 1 pt 4 lc rgb 'pink',\
 
 
 #unset multiplot

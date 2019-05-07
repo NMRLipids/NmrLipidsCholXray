@@ -6,11 +6,10 @@ from scipy.optimize import curve_fit
 
 def func(x, k, a):
   return k*x+a
-CFfig=plt.figure()
-      
 
+CFfig=plt.figure(figsize=(10,10))
 
-
+analL=float(sys.argv[2])
 #data1 = numpy.loadtxt(sys.argv[1], usecols=range(0,7))
 for c in range(1,15):
   data1 = numpy.loadtxt(sys.argv[1], usecols=range(0,1)), numpy.loadtxt(sys.argv[1], usecols=range(c,c+1))
@@ -24,7 +23,6 @@ for c in range(1,15):
   kcov1=0#[0]*3
   kcov2=0#[0]*3
   kcov3=0#[0]*3
-  analL=51
   j=0
   for i in range(0,len(data1[0])):
     if data1[0][i]<analL:
@@ -43,8 +41,19 @@ for c in range(1,15):
     color='C'+str(c-6)
   else:
     color='C'+str(c)
-  plt.plot(dataLOGx,dataLOGy,marker='o',linestyle='',color=str(color))
-  plt.plot(data1[0],func(data1[0],k1[0],k1[1]),color=str(color))
+  title='C'+str(c+1)
+  plt.subplot(7,2,c)
+  plt.ylim((0.05,0.43))
+  plt.xlim((-5,65)) 
+  plt.plot(data1[0],numpy.absolute(data1[1]),marker='o',linestyle='')
+  plt.plot(data1[0],numpy.absolute(func(data1[0],k1[0],k1[1])))
+  plt.text(0,0.35,title)
+  if c<13:
+    plt.gca().axes.get_xaxis().set_ticklabels([])
+  else:
+    plt.xlabel('[cholesterol]')
+  #plt.gca().axes.get_yaxis().set_visible(False)
+  #plt.legend(bbox_to_anchor=(1, 1),loc=2, borderaxespad=0.)
 
 
 CFfig.savefig('../scratch/tst.pdf')
