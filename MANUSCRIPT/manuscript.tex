@@ -280,13 +280,6 @@ The absolute values of order parameters of sn-1 chain from $^{13}$C NMR experime
 exhibit approximately linear increase with cholesterol up to equimolar mixture (Fig. \ref{slopes}), which is expected because
 phase separation is not observed for this mixture \cite{ionova12,ferreira13}.
 %thus the intermolecular interactions are expected to have maximum effect in equimolar mixture.
-
-Experimental acyl chain order parameters are typically well reproduced in the state of the art lipid models
-for pure lipid bilayers (for review see \cite{ollila16}). This is also mainly observed in the data
-presented here, except that CHARMM36 slightly overestimates the order parameters and MACROG model
-underestimates order parameters in the beginning of sn-1 chain. In equimolar mixtures with cholesterol
-all models overestimate the order parameters. For Berger/H\"oltje and MACROG models the overestimation is significant,
-while less severe for CHARMM36 and Slipid models.\\
 \todo{Is overestimation in CHARMM36 and Slipid significant or not?} \\
 \todo{Lipid14 results from recent article should be added in this figure} 
 \begin{figure*}[]
@@ -297,25 +290,29 @@ while less severe for CHARMM36 and Slipid models.\\
   }
 \end{figure*}
 
-\begin{figure*}[]
-  \centering
-  \includegraphics[width=17.2cm]{../FIGS/OrderParametersCHOLfitness.eps}
-  \caption{\label{OrderParametersCHOL}
-    Difference between order parameters from simulations and experiments for acyl chains of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC).
-  }
-\end{figure*}
-
-The order parameter changes as a function of cholesterol for each segment are shown in Fig.~\ref{OrderParametersCHOLchanges}
-(currently only sn-1). \\
-\todo{This figure should be finished and similar for sn-2 should be done as well}
+Experimental acyl chain order parameters of pure POPC lipid bilayers
+are well reproduced by most force fields (Fig. \ref{OrderParametersCHOL}),
+except for the C$_2$ carbon in {\it sn}-1 chain,
+which is typically the case in the state of the art lipid force fields (for review see \cite{ollila16}).
+%This is also mainly observed in the data
+%presented here, except that
+However, the order parameters in the beginning of {\it sn}-1 chain are underestimated in the
+MACROG simulation and CHARMM36 simulations ran also with other than Gromacs
+(section \ref{CHARMMprograms} in the supplementary information) slightly overestimates the order parameters.
+The absolute values of {\it sn}-1 acyl chain order parameters exhibit approximately linear increase upon addition
+of cholesterol also in simulations below equimolar mixture (Figs. \ref{slopesberger}-\ref{slopesslipids310K}).
+However, the slope of the increase (Fig. \ref{OrderParametersCHOLchanges}) and order parameters
+in equimolar mixtures (Fig. \ref{OrderParametersCHOL}) are overestimated by all force fields.
+%For Berger/H\"oltje and MACROG models the overestimation is significant,
+%while less severe for CHARMM36 and Slipid models.
+The overestimation of order parameters observed in CHARMM without cholesterol and in all force fields
+with cholesterol is smaller than the contribution by undulations in large simulations (section \ref{undulations} in the supplementary information).
 \begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../FIGS/slopes.eps}
   \caption{\label{OrderParametersCHOLchanges}
     Slopes of order parameters as a function of cholesterol.
-    %Order parameter changes from simulations and experiments for each segment in sn-1 chain of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC) as a function of cholesterol concentration.
   }
-  
 \end{figure}
 
 \todo{Also experimental cholesterol order parameters are available. Maybe these should be calculated from simulations as well.}
@@ -383,6 +380,18 @@ different cholesterol concentrations are compared to experimental data in Fig.~\
     Density profiles from simulations and experiments.
   }
 \end{figure}
+
+
+\section{Presenting the quality of lipid bilayer MD simulation with binary mixtures}  
+
+\begin{figure*}[]
+  \centering
+  \includegraphics[width=17.2cm]{../FIGS/OrderParametersCHOLfitness.eps}
+  \caption{\label{OrderParametersCHOLfitness}
+    Difference between order parameters from simulations and experiments for acyl chains of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC).
+  }
+\end{figure*}
+
 
 
 
