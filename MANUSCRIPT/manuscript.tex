@@ -114,9 +114,12 @@ NMR and scattering data.
 
 %\label{}
 \section{Introduction}
+
+\todo{We should emphasize the validation aspect of intermolecular interactions in binary lipid mixtures in the introduction.}
+
 Details of intermolecular interactions determine the phase
 behaviour and details lateral organization of lipid and bilayers
-containing cholesterol \cite{ipsen87}.~\todo{Fix Ole's name among the authors of this paper.}
+containing cholesterol \cite{ipsen87}.
 Formation of lateral heterogeneities \cite{kinnunen91}, lipid rafts \cite{simons97}
 and superlattices \cite{somerharju09} in cellular membranes have been
 suggested to be driven by interactions between cholesterol
@@ -261,7 +264,9 @@ Slipids\cite{jambeck12b,jambeck12,jambeck13b}  & POPC   & 200 & 0 & 0\%   & ?  &
 \end{tabular}
 \end{table*} 
 
+\subsection{Quantitative quality measure for lipid bilayer structure}
 
+\todo{To be written once we have agreed on the used measure.}
 
 
 
@@ -311,6 +316,8 @@ with cholesterol is smaller than the contribution by undulations in large simula
   \includegraphics[width=8cm]{../FIGS/slopes.eps}
   \caption{\label{OrderParametersCHOLchanges}
     Slopes of order parameters as a function of cholesterol.
+    Determined by fitting equation $S_{\rm CH}(C_{\rm chol})=k_{\rm OP}C_{\rm chol}+S_{\rm CH}(0)$
+    to the data in figures \ref{slopes}-\ref{slopesslipids310K}.
   }
 \end{figure}
 
@@ -404,6 +411,13 @@ rather than better quality of lipid-cholesterol interactions in this model.
   \caption{\label{FormFactorsFITNESS}
     Fitness of form factors between simulations and experiments.
   }
+    \todo{Figure to be done properly when the fitness code is finished.
+    This is discussed in issues
+    https://github.com/NMRLipids/MATCH/issues/65,
+    https://github.com/NMRLipids/MATCH/issues/64,
+    https://github.com/NMRLipids/MATCH/issues/56, and
+    https://github.com/NMRLipids/MATCH/issues/50
+  }
 \end{figure}
 
 \begin{figure}[]
@@ -415,7 +429,7 @@ rather than better quality of lipid-cholesterol interactions in this model.
 \end{figure}
 
 
-\section{Presenting the quality of lipid bilayer MD simulation with binary mixtures}  
+\subsection{Presenting the quality of lipid bilayer MD simulation with binary mixtures}  
 
 All the tested MD simulation models qualitatively reproduced experimentally observed condenced and
 ordering effects of cholesterol. However, the acyl chain ordering was overestimated and quality
@@ -444,6 +458,13 @@ format (Fig. \ref{OrderParametersCHOLfitness}).
   \includegraphics[width=17.2cm]{../FIGS/OrderParametersCHOLfitness.eps}
   \caption{\label{OrderParametersCHOLfitness}
     Difference between order parameters from simulations and experiments for acyl chains of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC).
+  }
+  \todo{Figure to be done properly when the fitness code is finished.
+    This is discussed in issues
+    https://github.com/NMRLipids/MATCH/issues/65,
+    https://github.com/NMRLipids/MATCH/issues/64,
+    https://github.com/NMRLipids/MATCH/issues/56, and
+    https://github.com/NMRLipids/MATCH/issues/50
   }
 \end{figure*}
 
