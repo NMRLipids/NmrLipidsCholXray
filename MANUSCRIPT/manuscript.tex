@@ -265,7 +265,7 @@ Slipids\cite{jambeck12b,jambeck12,jambeck13b}  & POPC   & 200 & 0 & 0\%   & ?  &
 
 
 
-
+\clearpage
 
 \section{Results and Discussion}
 
@@ -280,14 +280,13 @@ The absolute values of order parameters of sn-1 chain from $^{13}$C NMR experime
 exhibit approximately linear increase with cholesterol up to equimolar mixture (Fig. \ref{slopes}), which is expected because
 phase separation is not observed for this mixture \cite{ionova12,ferreira13}.
 %thus the intermolecular interactions are expected to have maximum effect in equimolar mixture.
-\todo{Is overestimation in CHARMM36 and Slipid significant or not?} \\
-\todo{Lipid14 results from recent article should be added in this figure} 
 \begin{figure*}[]
   \centering
   \includegraphics[width=17.2cm]{../FIGS/OrderParametersCHOL.eps}
   \caption{\label{OrderParametersCHOL}
     Order parameters from simulations and experiments for acyl chains of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC).
   }
+  \todo{Lipid14 results?} 
 \end{figure*}
 
 Experimental acyl chain order parameters of pure POPC lipid bilayers
@@ -297,8 +296,8 @@ which is typically the case in the state of the art lipid force fields (for revi
 %This is also mainly observed in the data
 %presented here, except that
 However, the order parameters in the beginning of {\it sn}-1 chain are underestimated in the
-MACROG simulation and CHARMM36 simulations ran also with other than Gromacs
-(section \ref{CHARMMprograms} in the supplementary information) slightly overestimates the order parameters.
+MACROG simulation and CHARMM36 simulations slightly overestimates the order parameters, also when
+used with other than Gromacs simulation packages (section \ref{CHARMMprograms} in the supplementary information).
 The absolute values of {\it sn}-1 acyl chain order parameters exhibit approximately linear increase upon addition
 of cholesterol also in simulations below equimolar mixture (Figs. \ref{slopesberger}-\ref{slopesslipids310K}).
 However, the slope of the increase (Fig. \ref{OrderParametersCHOLchanges}) and order parameters
@@ -318,20 +317,61 @@ with cholesterol is smaller than the contribution by undulations in large simula
 \todo{Also experimental cholesterol order parameters are available. Maybe these should be calculated from simulations as well.}
 
 \subsection{Lipid bilayer dimensions and density profiles as a function of cholesterol}
-Cholesterol induced changes in lipid packing, thickness and density profiles are suggested
-to be relevant, for example, for membrane protein interactions and cellular membrane
-lateral organization \cite{??}. Experimental and simulation studies show that
-the cholesterol induces the so called ''condensing effect'', i.e. acyl chain ordering
-increases the membrane thickness and
-reduces the area per molecule in lipid bilayers \cite{??}. This is demonstrated
-from simulations in Fig. \ref{apls}, showing the area per PC headgroups and per
-total number of molecules as a function of cholesterol concentration from different
-models. All models show reduction of area per total amount of molecules, partly
+
+Lipid bilayer dimensions can be experimentally accessed by measuring X-ray scattering
+form factor, which is related to the electron density along membrane normal
+via Fourier transformation \cite{pan12,Heftberger15,Marquardt15,ollila16,??}.
+%methods and have been widely used to validate lipid bilayer simulations \cite{ollila16,??}. 
+The form factor can be translated to density profiles, 
+%While sophisticated models are applied to extract
+area per lipids and bilayer thickness using SDP model or its combination with MD simulations  \cite{pan12,Heftberger15,Marquardt15,??}.
+Sophisticated approaches for single component lipid bilayers are available \cite{??},
+but multicomponent systems are more difficult to interpret \cite{pan12,Heftberger15,Marquardt15,??}.
+%In such case the validation can be done by comparing directly measurable form factors between
+%simulations and experiments. If simulation reproduces the form factor, it can be also
+%used to interpret the experiments.
+
+State of the art force fields give good agreement with experimental form factors for
+pure POPC lipid bilayers \cite{??}, which is the case also here, except for the Berger
+simulation (Fig.~\ref{FormFactors}).
+%The form factors from different simulation models with
+%different cholesterol concentrations are compared to experimental data in Fig.~\ref{FormFactors}. \\
+Upon addition of cholesterol, the third minima in form factor systemically decreases from $\sim$0.42 to $\sim$0.32
+%Cholesterol induced changes in lipid packing, thickness and density profiles are suggested
+%to be relevant, for example, for membrane protein interactions and cellular membrane
+%lateral organization \cite{??}. Experimental and simulation studies show that
+%the cholesterol induces the so called ''condensing effect'', i.e. acyl chain ordering
+%increases the membrane thickness and
+%reduces the area per molecule in lipid bilayers \cite{??}.
+This may be related to the reduced area per molecule upon addition of cholesterol (Fig. \ref{apls}).
+%, showing the area per PC headgroups and per
+%total number of molecules as a function of cholesterol concentration from different
+%models.
+The area per total amount of molecules decreas with cholesterol in all simulations, partly
 due to the smaller area covered by the cholesterol than lipids, but also because
 lipids ordered by cholesterol require less space. Due to the latter effect,
 the area per PC headgroup does not essentially increase up to the addition of
-$\sim$15 mol\% of cholesterol. \\
-\todo{Membrane thickness to be plotted as well.}
+$\sim$15 mol\% of cholesterol. 
+\begin{figure}[]
+ \centering
+ \includegraphics[width=8cm]{../FIGS/FormFactors.eps}
+ \caption{\label{FormFactors}
+   Form factors from simulations and experiments.
+ }
+ \todo{Details about form factor calculation code is discussed in issues
+   https://github.com/NMRLipids/MATCH/issues/56 and https://github.com/NMRLipids/MATCH/issues/50.
+   Once the code is finalized, we should recalculate and check the form factors.
+   CURRENTLY, 10\%-40\% cholesterol concetrations are calculated with a code which gives possibly incorrect
+   heigths for the maxima.
+ } \\
+ \todo{The y-axis scale cannot be explicitly measured in experiments.
+   Therefore, the y-axis of the experimental form factor is typically scaled to match with simulations.
+   This currently not done, because we have several simulations which give inequal form factors, and therefore
+   it is not clear against which simulation results we should scale the experimental results.
+   I have created a issue for this discussion: https://github.com/NMRLipids/NmrLipidsCholXray/issues/18
+ } \\
+ \todo{Not all experimental and simulation data is here (maybe?).}
+\end{figure}
 \begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../FIGS/apls.eps}
@@ -344,45 +384,60 @@ $\sim$15 mol\% of cholesterol. \\
   }
 \end{figure}
 
-Bilayer dimensions are indirectly experimentally accessible by scattering methods 
-and have been widely used to validate lipid bilayer simulations \cite{ollila16,??}. 
-While sophisticated models are applied to extract area per molecule and thicknes for single
-component lipid bilayers, the results for multicomponent systems are more difficult to interpret \cite{pan12,Heftberger15,Marquardt15,??}.
-In such case the validation can be done by comparing directly measurable form factors between
-simulations and experiments. If simulation reproduces the form factor, it can be also
-used to interpret the experiments.  The form factors from different simulation models with
-different cholesterol concentrations are compared to experimental data in Fig.~\ref{FormFactors}. \\
-\todo{Discussion to be finished when the data is solid.}
-
- \begin{figure}[]
-  \centering
-  \includegraphics[width=8cm]{../FIGS/FormFactors.eps}
-  \caption{\label{FormFactors}
-    Form factors from simulations and experiments.
-  }
-  \todo{Form factor calculation method should be double checked.}
-  \todo{Experimental form factor amplitudes are not scaled to match with simulations, as done usually}
-  \todo{Not all experimental and simulation data is here.}
-\end{figure}
-
- \begin{figure}[]
+Visual inspection of form factors (Fig. \ref{FormFactors}) and quantitative quality estimation (Fig. \ref{FormFactorsFITNESS})
+suggests that the Berge/Holtje force field gives the best agreement with experiments with large
+cholesterol concentration. This is surprising because the same model overestimated acyl chain
+order parameter increase upon addition of cholesterol more than CHARMM36 or Slipids simulations
+(Figs. \ref{OrderParametersCHOL} and \ref{OrderParametersCHOLchanges}).
+The Berger/Holtje model also exhibits the most pronounced decrease in the area per molecule
+upon addition of cholesterol (Fig. \ref{alps}).
+On the other hand, the electron density profiles from Berger/Holtje simulations are closer
+to the result from the SDP model then other MD simulation models for both pure POPC bilayer
+and equimolar POPC/cholesterol mixture, especially in the middle of the bilayer
+where SDP model gives substantially lower density than MD simulations (Fig. \ref{densities}).
+Therefore, the good quality of form factor Berger/Holtje model with large amounts of cholesterol
+may rather indicate the importance of this low electron density in the bilayer center,
+rather than better quality of lipid-cholesterol interactions in this model.
+\begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../FIGS/FFfitness.eps}
   \caption{\label{FormFactorsFITNESS}
     Fitness of form factors between simulations and experiments.
   }
- \end{figure}
+\end{figure}
 
-  \begin{figure}[]
+\begin{figure}[]
   \centering
   \includegraphics[width=8cm]{../FIGS/densitiesEXTREMES.eps}
   \caption{\label{densities}
-    Density profiles from simulations and experiments.
+    Electron density profiles from MD simulations and SDP model.
   }
 \end{figure}
 
 
 \section{Presenting the quality of lipid bilayer MD simulation with binary mixtures}  
+
+All the tested MD simulation models qualitatively reproduced experimentally observed condenced and
+ordering effects of cholesterol. However, the acyl chain ordering was overestimated and quality
+of form factors reduced with increasing amount of cholesterol. Although the biological importance
+of these details is unclear, overestimated ordering may promote formation of liquid ordered phases and
+inaccuate form factors complicate interpretation of scattering experiment with MD simulations.
+Therefore, MD simulation force fields correctly reproducing the order effects upon addition of the
+cholesterol would be invaluable.
+
+To facilitate the comparison of the quality of complex lipid bilayers,
+we introduce the quantitative quality measures which measure the quality of
+intermolecular interactions in binary lipid bilayers from different perspectives.
+The simple difference between experimental and simulated C-H bond order parameters
+give a very detailed picture about the quality of molecular conformations in all
+positions of lipid bilayer (Fig. \ref{OrderParametersCHOLfitness}).
+However, complexity of such presentation increases with increasing amount of data
+and it may be hard to present in practical format readable for human or machine.
+Using root mean square deviation across regions in the molecule simplifies the presentation,
+but compromizes the spatial resolution. Here, we divide the lipid into headgroup, glycerol
+backbone, sn-1 and sn-2 chains to present quality of binary lipid bilayer in more convenient
+format (Fig. \ref{OrderParametersCHOLfitness}).
+\todo{Discussion to be finished once we have the fitness function defined.}
 
 \begin{figure*}[]
   \centering
@@ -397,9 +452,9 @@ different cholesterol concentrations are compared to experimental data in Fig.~\
 
 \section{Conclusions}
 
-Cholesterol ordering effect is overestimated in Berger/Holtje and MacRog models.
-Slight overestimation is observed also in CHARMM36 and Slipid models, but more
-careful analysis is required to conclude if this is significant or not.
+%Cholesterol ordering effect is overestimated in Berger/Holtje and MacRog models.
+%Slight overestimation is observed also in CHARMM36 and Slipid models, but more
+%careful analysis is required to conclude if this is significant or not.
 
 
 
