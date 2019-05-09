@@ -272,7 +272,18 @@ Slipids\cite{jambeck12b,jambeck12,jambeck13b}  & POPC   & 200 & 0 & 0\%   & ?  &
 
 \clearpage
 
+
+\begin{figure*}[]
+  \centering
+  \includegraphics[width=17.2cm]{../FIGS/OrderParametersCHOL.eps}
+  \caption{\label{OrderParametersCHOL}
+    Order parameters from simulations and experiments for acyl chains of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC).
+  }
+  \todo{Lipid14 results?} 
+\end{figure*}
+
 \section{Results and Discussion}
+
 
 \subsection{Monitoring molecular interactions between POPC and cholesterol in lipid bilayer using NMR and MD simulations}
 
@@ -285,14 +296,6 @@ The absolute values of order parameters of sn-1 chain from $^{13}$C NMR experime
 exhibit approximately linear increase with cholesterol up to equimolar mixture (Fig. \ref{slopes}), which is expected because
 phase separation is not observed for this mixture \cite{ionova12,ferreira13}.
 %thus the intermolecular interactions are expected to have maximum effect in equimolar mixture.
-\begin{figure*}[]
-  \centering
-  \includegraphics[width=17.2cm]{../FIGS/OrderParametersCHOL.eps}
-  \caption{\label{OrderParametersCHOL}
-    Order parameters from simulations and experiments for acyl chains of  1-palmitoyl-2-oleoylphosphatidylcholine (POPC).
-  }
-  \todo{Lipid14 results?} 
-\end{figure*}
 
 Experimental acyl chain order parameters of pure POPC lipid bilayers
 are well reproduced by most force fields (Fig. \ref{OrderParametersCHOL}),
@@ -319,6 +322,7 @@ with cholesterol is smaller than the contribution by undulations in large simula
     Determined by fitting equation $S_{\rm CH}(C_{\rm chol})=k_{\rm OP}C_{\rm chol}+S_{\rm CH}(0)$
     to the data in figures \ref{slopes}-\ref{slopesslipids310K}.
   }
+  \todo{It would be good to plot these slopes from also other experimental data in the literature.}
 \end{figure}
 
 \todo{Also experimental cholesterol order parameters are available. Maybe these should be calculated from simulations as well.}
