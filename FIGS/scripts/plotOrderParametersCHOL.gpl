@@ -16,8 +16,7 @@ set yrange [0:0.42]
 set ylabel "-S_{CH}"
 set origin 0,0.35
 set size 0.65, 0.35
-plot "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoyl.txt"  using 1:2 title 'Experimental POPC, T=300K' with linespoints  linetype 1 pt 9 lc rgb 'black', \
-     "../../scratch/POPCmacrog/OrderParamSN1.dat" using ($1-1):($2*(-1)) title 'MacRog POPC, T=310K' with linespoint linetype 1 pt 9 lc rgb 'green', \
+plot      "../../scratch/POPCmacrog/OrderParamSN1.dat" using ($1-1):($2*(-1)) title 'MacRog POPC, T=310K' with linespoint linetype 1 pt 9 lc rgb 'green', \
      "../../scratch/POPCmacrog/OrderParamSN1.dat" using ($1-1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'green', \
      "../../../MATCH/Data/Lipid_Bilayers/POPC/T298K/MODEL_Berger/sn-1_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) title 'Berger POPC, T=300K' with linespoint linetype 1 pt 9 lc rgb 'red',\
      "../../../MATCH/Data/Lipid_Bilayers/POPC/T298K/MODEL_Berger/sn-1_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'red',\
@@ -28,7 +27,10 @@ plot "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoyl.txt"  using 1:2 title 'Ex
      "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_CHARMM36_GROMACS5.0/sn-1_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) title 'CHARMM36 POPC, T=310K' with linespoint linetype 1 pt 9 lc rgb 'blue',\
      "../../../MATCH/Data/Lipid_Bilayers/POPC/T310K/MODEL_CHARMM36_GROMACS5.0/sn-1_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 9 lc rgb 'blue', \
      "../../../MATCH/Data/Lipid_Bilayers/POPC/T303K/MODEL_CHARMM36_GROMACS5.1.2/sn-1_Order_Parameters_Simulation.dat" using ($1):($2*(-1)) title 'CHARMM36 POPC, T=303K' with linespoint linetype 1 pt 8 lc rgb 'blue',\
-     "../../../MATCH/Data/Lipid_Bilayers/POPC/T303K/MODEL_CHARMM36_GROMACS5.1.2/sn-1_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 8 lc rgb 'blue'
+     "../../../MATCH/Data/Lipid_Bilayers/POPC/T303K/MODEL_CHARMM36_GROMACS5.1.2/sn-1_Order_Parameters_Simulation.dat" using ($1):($3*(-1)) notitle with linespoint linetype 1 pt 8 lc rgb 'blue',\
+     "../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoyl.txt"  using 1:2 title 'Experimental POPC, T=300K' with linespoints  linetype 1 pt 9 lc rgb 'black', \
+"../../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoyl.txt"  using 1:2:8 title 'Experimental POPC, T=300K' with yerrorbars  pt 9 lc rgb 'black', \
+
 
 
 set title "POPC/CHOL (50 mol%)"
