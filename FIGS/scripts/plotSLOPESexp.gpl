@@ -1,0 +1,29 @@
+#set term postscript enhanced color  
+set terminal postscript portrait enhanced color dashed lw 1 "Helvetica" 14 
+set output "../slopesEXP.eps"
+set size 1.0, 1.0
+#set multiplot  layout 15,1
+#set xrange [0:50]
+#set yrange [0:0.4] 
+#set key above
+#set key font ",13"
+
+#set label 100 "sn-1" at graph 0.05,0.85 font ",18"
+#set title "POPC"
+
+#set yrange [0.15:0.39]
+#set ytic 0.05
+
+#set xtics format " "
+
+set key at graph 0.5,0.95
+set ylabel "Order parameter slope k_{OP}"
+set xlabel "Sn-1 carbon"
+#set origin 0,14*0.103
+#set size 1.0, 0.165
+plot   "../../DATA/expSLOPES.dat" using 1:($2) title 'Ferreira ' with linespoints  linetype 1 pt 5 lc rgb 'black',\
+       "../../DATA/expSLOPESurbina.dat" using 1:($2) title 'Urbina ' with linespoints  linetype 1 pt 5 lc rgb 'red',\
+       "../../DATA/expSLOPESdouliez.dat" using 1:($2) title 'Experiment T300K' with linespoints  linetype 1 pt 5 lc rgb 'green',\
+
+#unset multiplot
+

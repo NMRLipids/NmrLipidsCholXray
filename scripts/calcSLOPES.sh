@@ -1,3 +1,8 @@
+python calcSLOPES.py ../DATA/OPcholEXPDMPCurbina.dat 51 > ../DATA/expSLOPESurbina.dat
+
+python calcSLOPES.py ../DATA/OPcholEXPDMPCdouliez.dat 51 > ../DATA/expSLOPESdouliez.dat
+mv ../scratch/tst.pdf ../FIGS/slopesEXPERIMENTdouliez.pdf
+
 python calcSLOPES.py ../DATA/EXP-Ferreira13/S_CH_POPC/OP_palmitoylTRANSPOSE.txt 51 > ../DATA/expSLOPES.dat
 mv ../scratch/tst.pdf ../FIGS/slopesEXPERIMENT.pdf
 
