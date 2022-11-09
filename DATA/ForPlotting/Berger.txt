@@ -1,0 +1,3 @@
+ CholFraction ForceField temperature path DOI:
+0 0.0 Berger 298.0 ../DATA/ForPlotting/b06/79c/b0679cd5bb4bed509b91a002305d2771ed4ad54e/72ec31258e95aefa0d053131b9e734b4b11eb030/ 10.5281/zenodo.4643875
+1 0.0 Berger 300.0 ../DATA/ForPlotting/b26/a77/b26a77bb464996d420103059fbfc792f35f000d8/508b09dc91e254f859051b74040b1dc8e1342919/ 10.5281/zenodo.1402417

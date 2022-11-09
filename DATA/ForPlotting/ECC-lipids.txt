@@ -1,0 +1,3 @@
+ CholFraction ForceField temperature path DOI:
+0 0.0 ECC-lipids 300.0 ../DATA/ForPlotting/821/08d/82108df2eeae8ee1ff2a9dfb390b730edd3e9a26/0476e26b6c2c5d789d51c0c7e5cf646a1608a433/ 10.5281/zenodo.1118980
+1 0.0 ECC-lipids 300.0 ../DATA/ForPlotting/995/877/9958771b8fb92ac07be7d4285d09f8df65cc758e/5ad07cc3a737f917dc0e69d6f00b44091322ff68/ 10.5281/zenodo.3335503
