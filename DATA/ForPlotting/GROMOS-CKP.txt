@@ -1,2 +1,2 @@
- CholFraction ForceField temperature path DOI:
-0 0.0 GROMOS-CKP 298.0 ../DATA/ForPlotting/e7b/a4b/e7ba4b167ed159f63ce55d7a6e6e7536d9fe93cd/48cb3719c54af93939a92567b276f9042a9abaf6/ 10.5281/zenodo.5997385
+ CholFraction ForceField temperature path DOI: Npopc Author
+0 0.0 GROMOS-CKP 298.0 ../DATA/ForPlotting/e7b/a4b/e7ba4b167ed159f63ce55d7a6e6e7536d9fe93cd/48cb3719c54af93939a92567b276f9042a9abaf6/ 10.5281/zenodo.5997385 500 "Samuli Ollila (samuli.ollila@helsinki.fi)"

@@ -1,2 +1,2 @@
- CholFraction ForceField temperature path DOI:
-0 0.0 Orange 298.0 ../DATA/ForPlotting/b5b/c04/b5bc04ce111a8a469884eeaead2ce48c5dab9ff7/a53e18fd1c83685c8842c0cb715492e08c3e765d/ 10.5281/zenodo.34488
+ CholFraction ForceField temperature path DOI: Npopc Author
+0 0.0 Orange 298.0 ../DATA/ForPlotting/b5b/c04/b5bc04ce111a8a469884eeaead2ce48c5dab9ff7/a53e18fd1c83685c8842c0cb715492e08c3e765d/ 10.5281/zenodo.34488 72 "Ollila, O. H. Samuli; Määttä, Jukka; Monticelli, Luca"
