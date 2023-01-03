@@ -1,2 +1,0 @@
- CholFraction ForceField temperature path DOI: Npopc Author
-0 0.5 slipids 298.0 ../DATA/ForPlotting/8cb/989/8cb989e1813b93d1144d731ffbbc04a5cfcfb6a6/2db4e1d512355edd21cedbc0d28a45659dd6faa9/ 10.5281/zenodo.159434 256 "Fernando Favela"
