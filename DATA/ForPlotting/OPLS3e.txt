@@ -1,2 +1,0 @@
- CholFraction ForceField temperature path DOI: Npopc Author
-0 0.0 OPLS3e 300.0 ../DATA/ForPlotting/692/0a3/6920a30724aaee777ec0b58cbcf374950e2f8c5a/1f0e4272f1802217f3e07b5599a6011f2b7ddac7/ 10.5281/zenodo.6582985 200 "Milla Lindström"
