@@ -1,5 +1,3 @@
-
-
 \documentclass[journal=jpcbfk]{achemso}
 
 \usepackage[version=3]{mhchem}
@@ -14,44 +12,66 @@
 \usepackage{multirow}
 \usepackage{lmodern}
 \usepackage{microtype}
-\usepackage{xr}
-\externaldocument{manuscript}
 \usepackage{soul}
+\usepackage{xr}
+
+\makeatletter
+\newcommand*{\addFileDependency}[1]{% argument=file name and extension
+  \typeout{(#1)}
+  \@addtofilelist{#1}
+  \IfFileExists{#1}{}{\typeout{No file #1.}}
+}
+\makeatother
+
+\newcommand*{\myexternaldocument}[1]{%
+    \externaldocument{#1}%
+    \addFileDependency{#1.tex}%
+    \addFileDependency{#1.aux}%
+    \addFileDependency{MANUSCRIPT/#1.tex}%
+    \addFileDependency{MANUSCRIPT/#1.aux}%
+}
+
+\externaldocument{manuscript}
 
 \author{Fernando Favela-Rosales}
 \affiliation{Departamento de F\'isica, Centro de Investigaci\'on y de Estudios Avanzados del IPN, Apartado Postal 14-740, 07000 M\'exico D.F., M\'exico}
-
+%
 \author{Peter Heftberger}
-\affiliation{University of Graz}
-
+\affiliation{Institute of Molecular Biosciences, Biophysics Division, NAWI Graz, University of Graz, Graz 8010, Austria}
+%
 \author{Matti Javanainen}
-\affiliation{Department of Physics, Tampere University of Technology, Tampere, Finland}
-\affiliation{University of Helsinki}
-
+\email{matti.javanainen@helsinki.fi}
+\affiliation{Institute of Organic Chemistry and Biochemistry,
+Academy of Sciences of the Czech Republic, 
+Prague 6, Czech Republic}
+\alsoaffiliation{Institute of Biotechnology, University of Helsinki}
+%
 \author{Jesper J. Madsen}
 \affiliation{Department of Global Health, College of Public Health}
-\affiliation{University of South Florida}
-
+\alsoaffiliation{University of South Florida}
+%
 \author{Josef Melcr}
 \affiliation{Institute of Organic Chemistry and Biochemistry,
 Academy of Sciences of the Czech Republic, 
 Prague 6, Czech Republic}
-
+%
 \author{Markus Miettinen}
 \affiliation{MPI}
-
+%
 \author{O. H. Samuli Ollila}
 \email{samuli.ollila@helsinki.fi}
 \affiliation{Institute of Organic Chemistry and Biochemistry,
 Academy of Sciences of the Czech Republic, 
 Prague 6, Czech Republic}
-\affiliation{Institute of Biotechnology, University of Helsinki}
-
+\alsoaffiliation{Institute of Biotechnology, University of Helsinki}
+%
 \author{Georg Pabst}
-\affiliation{University of Graz}
-
+\affiliation{Institute of Molecular Biosciences, Biophysics Division, NAWI Graz, University of Graz, Graz 8010, Austria}
+\alsoaffiliation{BioTechMed-Graz, Graz 8010, Austria}
+%
 \author{Thomas Piggot}
-\affiliation{University of Southampton}
+\affiliation{School of Chemistry, University of Southamptaon, Southampton SO17 1BJ, United Kingdom}
+\alsoaffiliation{Chemical Biological and Radiological Sciences, Defence Science and Technology Laboratory, Porton Down, Salisbury, Wiltshire SP4 0JQ, United Kingdom}
 
 \SectionNumbersOn
 
@@ -61,15 +81,16 @@ Prague 6, Czech Republic}
 \renewcommand{\thepage}{S\arabic{page}}%
 
 
-\title{SUPPLEMENTARY INFORMATION: NMRlipids III: Lipid-cholesterol interactions in atomistic resolution molecular dynamics simulations} %Title of paper
+\title{SUPPLEMENTARY INFORMATION FOR\\ 
+    NMRlipids III: Lipid--Cholesterol Interactions in Atomistic Resolution Molecular Dynamics Simulations}
 
 \begin{document}
 
+\tableofcontents
+
 \section{Simulation Parameters}
 
-The force field specific simulation parameters used for each force field are listed in Table~\ref{tab:params}. The parameter input files (\texttt{.mdp}) are provided in the Zenodo portal (links in the main text). 
-
-For all simulations, we used an integration time step of 2~fs and the leap-frog integrator of GROMACS. The isothermal--isobarit (NPT) ensemble was used with a temperature of 298~K and a pressure of 1~bar. All simulations were 1~\textmu{}s long, and trajectories were written every 1~ns. The P-LINCS constraint algorithm \cite{hess97,hess07} was used for the bonds noted in Table~\ref{tab:params}. 
+The force field specific simulation parameters used for each force field are listed in Table~\ref{SItab:params}. The parameter input files (\texttt{.mdp}) are provided in the Zenodo portal (links in the main text). For all simulations, we used an integration time step of 2~fs and the leap-frog integrator of GROMACS. The isothermal--isobaric (NPT) ensemble was used with a temperature of 298~K and a pressure of 1~bar. All simulations were 1~\textmu{}s long, and trajectories were written every 1~ns. The P-LINCS constraint algorithm \cite{hess97,hess07} was used for the bonds noted in Table~\ref{SItab:params}. 
 
 \begin{sidewaystable}[]
 \begin{center}
@@ -104,6 +125,95 @@ For all simulations, we used an integration time step of 2~fs and the leap-frog 
 \end{center}
 \end{sidewaystable}
 
+\clearpage
+
+\section{Additional Results}
+
+\subsection{Scattering Intensities}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt0.pdf}
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt5.pdf}\\
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt10.pdf}
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt15.pdf}\\
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt20.pdf}
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt25.pdf}
+    \caption{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol. More data are shown in the next figure.}
+    \label{SIfig:scattering1}
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt30.pdf}
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt35.pdf}\\
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt40.pdf}
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt45.pdf}\\
+    \includegraphics[width=0.49\linewidth]{FIGS/scatt50.pdf}
+    \caption{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol. More data are shown in the previous figure.}
+    \label{SIfig:scattering2}
+\end{figure}
+
+\subsection{Form Factors \& Electron Density Profiles}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.86\linewidth]{../FIGS/scattering.pdf}
+    \caption{\label{SIfig:scattering}%
+     \textbf{Scattering intensities as a function of scattering vector from experiments and simulations.} Each of the profiles is shifted vertically with respect to the previous one, by 1 for the experimental profiles and by 50 for the computational ones. The minima are marked by filled circles to guide the eye.
+    }
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=8.7cm]{../FIGS/ffminima.pdf}
+    \caption{\label{SIfig:ffminima}%
+    \textbf{Effecf of CHOL on the location of the first two minima in the form factor.}
+    The minima are extracted from the form factors interpolated to all CHOL concentrations (Fig.~\ref{SIfig:scattering}) from experiment and simulation with the \texttt{findpeaks} function in Matlab.
+    }
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{../FIGS/densityprofiles.pdf}
+    \caption{\label{SIfig:densprofs}%
+    \textbf{Electron density profiles.}
+    Each of the profiles is shifted vertically with respect to the previous one by 100 units.
+    }
+\end{figure}
+
+\clearpage
+\subsection{Order Parameters}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{../FIGS/palmitate.pdf}
+    \caption{\label{SIfig:palmitate}%
+     \textbf{Effect of cholesterol on the acyl chain order parameters of the POPC $sn$-1 (palmitate) chain.}
+     The legend at the top corresponds to all simulations, and the one at the bottom to the experiments.
+    }
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.9\linewidth]{../FIGS/oleate.pdf}
+    \caption{\label{SIfig:oleate}%
+     \textbf{Effect of cholesterol on the acyl chain order parameters of the POPC $sn$-2 (oleate) chain.}
+     The legend at the top corresponds to all simulations, and the one at the bottom to the experiments. Since the order parameters measured for the two hydrogens bound to the C2 carbon differ, they are both shown in the plots.
+    }
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{../FIGS/OP_headgroup.pdf}
+    \caption{\label{SIfig:headgroups}%
+     \textbf{The deviation of POPC head group parameters from experimental values as a function of CHOL concentration.}
+    }
+\end{figure}
+
+\clearpage
+\subsection{Dynamic Properties}
+
 \begin{figure}[htb!]
     \centering
     \includegraphics[width=0.9\linewidth]{../FIGS/d_vs_size.pdf}
@@ -120,63 +230,14 @@ For all simulations, we used an integration time step of 2~fs and the leap-frog 
     }
 \end{figure}
 
+\clearpage
+\subsection{Finite-Size Effects}
+
 \begin{figure}[htb!]
     \centering
     \includegraphics[width=8.7cm]{../FIGS/apl_vs_size.pdf}
     \caption{\label{SIfig:aplvssize}%
      \textbf{Dependence of area per lipid on simulation box size.} Area per lipid is calculated by dividing the membrane area by the number of lipids in one leaflet. Error bars show standard error extracted using block averaging in \texttt{gmx analyze}.
-    }
-\end{figure}
-
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\linewidth]{../FIGS/scattering.pdf}
-    \caption{\label{SIfig:scattering}%
-     \textbf{Scattering intensities as a function of scattering vector from experiments and simulations.} Each of the profiles is shifted vertically with respect to the previous one, by 1 for the experimental profiles and by 50 for the computational ones. The minima are marked by filled circles to guide the eye.
-    }
-\end{figure}
-
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\linewidth]{../FIGS/densityprofiles.pdf}
-    \caption{\label{SIfig:densprofs}%
-    \textbf{Electron density profiles.}
-    Each of the profiles is shifted vertically with respect to the previous one by 100 units.
-    }
-\end{figure}
-
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\linewidth]{../FIGS/palmitate.pdf}
-    \caption{\label{SIfig:palmitate}%
-     \textbf{Effect of cholesterol on the acyl chain order parameters of the POPC $sn$-1 (palmitate) chain.}
-     The legend at the top corresponds to all simulations, and the one at the bottom to the experiments.
-    }
-\end{figure}
-
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\linewidth]{../FIGS/oleate.pdf}
-    \caption{\label{SIfig:oleate}%
-     \textbf{Effect of cholesterol on the acyl chain order parameters of the POPC $sn$-2 (oleate) chain.}
-     The legend at the top corresponds to all simulations, and the one at the bottom to the experiments. Since the order parameters measured for the two hydrogens bound to the C2 carbon differ, they are both shown in the plots.
-    }
-\end{figure}
-
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\linewidth]{../FIGS/OP_headgroup.pdf}
-    \caption{\label{SIfig:headgroups}%
-     \textbf{The deviation of POPC head group parameters from experimental values as a function of CHOL concentration.}
-    }
-\end{figure}
-
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=8.7cm]{../FIGS/choltilt.pdf}
-    \caption{\label{SIfig:choltilt}%
-     \textbf{Effect of cholesterol concentration on the tilt of the cholesterol molecules.}
-     The tilt is defined as the angle between the vector connecting the C3 and C17 carbons at the two ends of the rigid ring structure of cholesterol. The hydroxyl group is bound to C3 and the hydrocarbon chain to C17. The tilt distributions were gathered from the two leaflets, fitted with a Gamma distribution, and the mean values and standard deviations were extracted and shown here as the value and error estimate, respectively. The cholesterol concentration was identical between the simulations, but the points are horizontally slightly shifted for clarity.
     }
 \end{figure}
 
@@ -189,29 +250,20 @@ For all simulations, we used an integration time step of 2~fs and the leap-frog 
     }
 \end{figure}
 
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=\linewidth]{../FIGS/CH.pdf}
-    \caption{\label{SIfig:chdist}%
-    \textbf{Distributions of C--H bond orientations.}
-    Leftmost panel: The probability distributions for the angle of C--H vectors of the last 6 carbons in the palmitate chain of POPC with respect to the $xy$-plane. All distributions are centered around 0, but have different shapes. The markers show data extracted from Slipids simulations at various CHOL concentrations, and the solid lines show two-Gaussian fits with fixed standard deviations to the data. These Gaussians correspond to the more and less ordered palmitate chains. The fixed standard deviations were extracted from a fit of two Gaussians to the data accumulated across all CHOL concentrations. The fit with the fixed standard deviations to all CHOL concentrations are excellent with $R^2=0.991\pm 0.005$ (mean$\pm$standard deviation).
-    %
-    Middle panel: The standard deviations of the two Gaussians fitted to the C--H distribution (such as the one in the leftmost panel) for the four force fields. 
-    %
-    Rightmost panel: The fraction of the more ordered component as a function of CHOL concentration extracted simply by dividing the prefactor in the Gaussian distribution for the more ordered component by the sum of the two prefactors. Notably, in the CHOL-free system, the ordered component is not present.
-    }
-\end{figure}
+\clearpage
+\subsection{Cholesterol Tilt}
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=8.7cm]{../FIGS/ffminima.pdf}
-    \caption{\label{SIfig:ffminima}%
-    \textbf{Effecf of CHOL on the location of the first two minima in the form factor.}
-    The minima are extracted from the form factors interpolated to all CHOL concentrations (Fig.~\ref{SIfig:scattering}) from experiment and simulation with the \texttt{findpeaks} function in Matlab.
+    \includegraphics[width=8.7cm]{../FIGS/choltilt.pdf}
+    \caption{\label{SIfig:choltilt}%
+     \textbf{Effect of cholesterol concentration on the tilt of the cholesterol molecules.}
+     The tilt is defined as the angle between the vector connecting the C3 and C17 carbons at the two ends of the rigid ring structure of cholesterol. The hydroxyl group is bound to C3 and the hydrocarbon chain to C17. The tilt distributions were gathered from the two leaflets, fitted with a Gamma distribution, and the mean values and standard deviations were extracted and shown here as the value and error estimate, respectively. The cholesterol concentration was identical between the simulations, but the points are horizontally slightly shifted for clarity.
     }
 \end{figure}
 
 \clearpage
+
 
 \bibliography{refs.bib}
 
