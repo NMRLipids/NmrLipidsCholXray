@@ -88,9 +88,9 @@ Prague 6, Czech Republic}
 
 \tableofcontents
 
-\section{Simulation Parameters}
+\section{Simulation Details}
 
-The force field specific simulation parameters used for each force field are listed in Table~\ref{SItab:params}. The parameter input files (\texttt{.mdp}) are provided in the Zenodo portal (links in the main text). For all simulations, we used an integration time step of 2~fs and the leap-frog integrator of GROMACS. The isothermal--isobaric (NPT) ensemble was used with a temperature of 298~K and a pressure of 1~bar. All simulations were 1~\textmu{}s long, and trajectories were written every 1~ns. The P-LINCS constraint algorithm \cite{hess97,hess07} was used for the bonds noted in Table~\ref{SItab:params}. 
+The force field specific simulation parameters used for each force field are listed in Table~\ref{SItab:params}. The parameter input files (\texttt{.mdp}) are provided in the Zenodo portal (links in the main text). For all simulations, we used an integration time step of 2~fs and the leap-frog integrator of GROMACS. The isothermal--isobaric (NPT) ensemble was used with a temperature of 298~K and a pressure of 1~bar. All simulations were 1~\textmu{}s long, and trajectories were written every 1~ns. The P-LINCS constraint algorithm \cite{hess97,hess07} was used for the bonds noted in Table~\ref{SItab:params}. NMRlipids databank~\cite{NMRlipidsDatabank} ID numbers of simulations are given in table~\ref{IDtable}.
 
 \begin{sidewaystable}[]
 \begin{center}
@@ -124,6 +124,109 @@ The force field specific simulation parameters used for each force field are lis
     \end{tabular}
 \end{center}
 \end{sidewaystable}
+
+\clearpage
+
+\begin{table}[]
+\begin{tabular}{ccc}
+\textbf{CHARMM36} \\
+\toprule
+\textbf{System} & \textbf{ID} \\
+\midrule
+1024POPC\_128CHOL\_57600SOL\_298K  &  426 \\ 
+64POPC\_3200SOL\_298K  &  546 \\ 
+1024POPC\_896CHOL\_96000SOL\_298K  &  543 \\ 
+64POPC\_40CHOL\_5200SOL\_298K  &  620 \\ 
+64POPC\_56CHOL\_6000SOL\_298K  &  91 \\ 
+1024POPC\_416CHOL\_72000SOL\_298K  &  412 \\ 
+1024POPC\_256CHOL\_64000SOL\_298K  &  88 \\ 
+256POPC\_64CHOL\_16000SOL\_298K  &  72 \\ 
+64POPC\_8CHOL\_3600SOL\_298K  &  109 \\ 
+256POPC\_104CHOL\_18000SOL\_298K  &  298 \\ 
+64POPC\_16CHOL\_4000SOL\_298K  &  525 \\ 
+64POPC\_26CHOL\_4500SOL\_298K  &  393 \\ 
+1024POPC\_640CHOL\_83200SOL\_298K  &  550 \\ 
+256POPC\_160CHOL\_20800SOL\_298K  &  275 \\ 
+256POPC\_224CHOL\_24000SOL\_298K  &  166 \\ 
+256POPC\_32CHOL\_14400SOL\_298K  &  119 \\ 
+\end{tabular}
+\quad
+\begin{tabular}{cc}
+\textbf{Slipids} \\
+\toprule
+\textbf{System} & \textbf{ID} \\
+\midrule
+Slipids\_POPC\_CHOL20\_L  &  691 \\ 
+Slipids\_POPC\_CHOL47\_M  &  712 \\ 
+Slipids\_POPC\_CHOL29\_S  &  693 \\ 
+Slipids\_POPC\_CHOL20\_S  &  692 \\ 
+Slipids\_POPC\_CHOL20\_M  &  687 \\ 
+Slipids\_POPC\_CHOL11\_S  &  672 \\ 
+Slipids\_POPC\_CHOL11\_M  &  681 \\ 
+Slipids\_POPC\_L  &  696 \\ 
+Slipids\_POPC\_CHOL38\_S  &  661 \\ 
+Slipids\_POPC\_M  &  708 \\ 
+Slipids\_POPC\_CHOL38\_L  &  670 \\ 
+Slipids\_POPC\_S  &  664 \\ 
+Slipids\_POPC\_CHOL29\_L  &  709 \\ 
+Slipids\_POPC\_CHOL29\_M  &  659 \\ 
+Slipids\_POPC\_CHOL11\_L  &  697 \\ 
+Slipids\_POPC\_CHOL38\_M  &  668 \\ 
+Slipids\_POPC\_CHOL47\_S  &  703 \\ 
+Slipids\_POPC\_CHOL47\_L  &  682 \\
+\end{tabular}
+\quad
+\begin{tabular}{cc}
+\textbf{Lipid17} \\
+\toprule
+\textbf{System} & \textbf{ID} \\
+\midrule
+Lipid17\_POPC\_CHOL29\_M  &  700 \\ 
+Lipid17\_POPC\_CHOL47\_L  &  717 \\ 
+Lipid17\_POPC\_CHOL11\_L  &  663 \\ 
+Lipid17\_POPC\_CHOL29\_L  &  683 \\ 
+Lipid17\_POPC\_CHOL20\_S  &  662 \\ 
+Lipid17\_POPC\_CHOL47\_M  &  714 \\ 
+Lipid17\_POPC\_CHOL38\_S  &  688 \\ 
+Lipid17\_POPC\_L  &  684 \\ 
+Lipid17\_POPC\_S  &  715 \\ 
+Lipid17\_POPC\_CHOL20\_M  &  666 \\ 
+Lipid17\_POPC\_M  &  657 \\ 
+Lipid17\_POPC\_CHOL29\_S  &  686 \\ 
+Lipid17\_POPC\_CHOL38\_L  &  673 \\ 
+Lipid17\_POPC\_CHOL47\_S  &  707 \\ 
+Lipid17\_POPC\_CHOL11\_S  &  680 \\ 
+Lipid17\_POPC\_CHOL20\_L  &  667 \\ 
+Lipid17\_POPC\_CHOL38\_M  &  694 \\ 
+Lipid17\_POPC\_CHOL11\_M  &  689 \\
+\end{tabular}
+\quad
+\begin{tabular}{cc}
+\textbf{MacRog} \\
+\toprule
+\textbf{System} & \textbf{ID} \\
+\midrule
+MacRog\_POPC\_CHOL38\_S  &  716 \\ 
+MacRog\_POPC\_CHOL29\_L  &  705 \\ 
+MacRog\_POPC\_CHOL47\_M  &  699 \\ 
+MacRog\_POPC\_CHOL47\_L  &  671 \\ 
+MacRog\_POPC\_CHOL20\_L  &  677 \\ 
+MacRog\_POPC\_S  &  674 \\ 
+MacRog\_POPC\_CHOL20\_M  &  706 \\ 
+MacRog\_POPC\_CHOL38\_L  &  698 \\ 
+MacRog\_POPC\_CHOL38\_M  &  679 \\ 
+MacRog\_POPC\_M  &  675 \\ 
+MacRog\_POPC\_L  &  658 \\ 
+MacRog\_POPC\_CHOL29\_M  &  655 \\ 
+MacRog\_POPC\_CHOL11\_L  &  660 \\ 
+MacRog\_POPC\_CHOL11\_S  &  665 \\ 
+MacRog\_POPC\_CHOL29\_S  &  690 \\ 
+MacRog\_POPC\_CHOL11\_M  &  695 \\ 
+MacRog\_POPC\_CHOL47\_S  &  704 \\ 
+MacRog\_POPC\_CHOL20\_S  &  702 \\
+\end{tabular}
+\caption{NMRlipids databank IDs of performed simulations.}\label{IDtable}
+\end{table}
 
 \clearpage
 
