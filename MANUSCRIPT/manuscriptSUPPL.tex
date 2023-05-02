@@ -33,45 +33,47 @@
 
 \externaldocument{manuscript}
 
-\author{Fernando Favela-Rosales}
-\affiliation{Departamento de F\'isica, Centro de Investigaci\'on y de Estudios Avanzados del IPN, Apartado Postal 14-740, 07000 M\'exico D.F., M\'exico}
+% \author{Fernando Favela-Rosales}
+% \affiliation{Departamento de F\'isica, Centro de Investigaci\'on y de Estudios Avanzados del IPN, Apartado Postal 14-740, 07000 M\'exico D.F., M\'exico}
 %
 \author{Peter Heftberger}
 \affiliation{Institute of Molecular Biosciences, Biophysics Division, NAWI Graz, University of Graz, Graz 8010, Austria}
 %
 \author{Matti Javanainen}
-\email{matti.javanainen@helsinki.fi}
 \affiliation{Institute of Organic Chemistry and Biochemistry,
 Academy of Sciences of the Czech Republic, 
 Prague 6, Czech Republic}
 \alsoaffiliation{Institute of Biotechnology, University of Helsinki}
+\email{matti.javanainen@helsinki.fi}
 %
-\author{Jesper J. Madsen}
-\affiliation{Department of Global Health, College of Public Health}
-\alsoaffiliation{University of South Florida}
+% \author{Jesper J. Madsen}
+% \affiliation{Department of Global Health, College of Public Health}
+% \alsoaffiliation{University of South Florida}
 %
-\author{Josef Melcr}
-\affiliation{Institute of Organic Chemistry and Biochemistry,
-Academy of Sciences of the Czech Republic, 
-Prague 6, Czech Republic}
+% \author{Josef Melcr}
+% \affiliation{Institute of Organic Chemistry and Biochemistry,
+% Academy of Sciences of the Czech Republic, 
+% Prague 6, Czech Republic}
 %
 \author{Markus Miettinen}
-\affiliation{MPI}
+\affiliation{Department of Chemistry, University of Bergen, Norway}
+\alsoaffiliation{Computational Biology Unit, Department of Informatics, University of Bergen, Norway}
+
 %
 \author{O. H. Samuli Ollila}
-\email{samuli.ollila@helsinki.fi}
 \affiliation{Institute of Organic Chemistry and Biochemistry,
 Academy of Sciences of the Czech Republic, 
 Prague 6, Czech Republic}
 \alsoaffiliation{Institute of Biotechnology, University of Helsinki}
+\email{samuli.ollila@helsinki.fi}
 %
 \author{Georg Pabst}
 \affiliation{Institute of Molecular Biosciences, Biophysics Division, NAWI Graz, University of Graz, Graz 8010, Austria}
 \alsoaffiliation{BioTechMed-Graz, Graz 8010, Austria}
 %
-\author{Thomas Piggot}
-\affiliation{School of Chemistry, University of Southamptaon, Southampton SO17 1BJ, United Kingdom}
-\alsoaffiliation{Chemical Biological and Radiological Sciences, Defence Science and Technology Laboratory, Porton Down, Salisbury, Wiltshire SP4 0JQ, United Kingdom}
+% \author{Thomas Piggot}
+% \affiliation{School of Chemistry, University of Southamptaon, Southampton SO17 1BJ, United Kingdom}
+% \alsoaffiliation{Chemical Biological and Radiological Sciences, Defence Science and Technology Laboratory, Porton Down, Salisbury, Wiltshire SP4 0JQ, United Kingdom}
 
 \SectionNumbersOn
 
@@ -102,7 +104,7 @@ The force field specific simulation parameters used for each force field are lis
     \textbf{Parameter} & \textbf{CHARMM36} & \textbf{Slipids} & \textbf{Lipid17} & \textbf{MacRog} \\
     \midrule % NB interactions
     Neighbour list type & Verlet \cite{pall2013flexible} & Verlet \cite{pall2013flexible} & Verlet \cite{pall2013flexible} & Verlet \cite{pall2013flexible} \\
-    Long-range electrostatics & PME & PME & PME & PME \\
+    Long-range electrostatics & PME \cite{essman95,darden93} & PME \cite{essman95,darden93} & PME \cite{essman95,darden93} & PME \cite{essman95,darden93} \\
     LJ cut-off & 1.2~nm & 1.4~nm & 0.9~nm & 1.0~nm \\
     LJ modifier & Force switch 1.0--1.2~nm & -- & -- & -- \\
     Dispersion correction & -- & Energy \& pressure \cite{shirts2007accurate} & Energy \& pressure \cite{shirts2007accurate} & Energy \& pressure \cite{shirts2007accurate} \\
@@ -118,8 +120,8 @@ The force field specific simulation parameters used for each force field are lis
     Constraints & Bonds with H & All bonds & Bonds with H & All bonds \\
     \midrule 
     Water model & TIPS3P \cite{durell1994solvent}  & TIP3P \cite{jorgensen83} & TIP3P \cite{jorgensen83} & TIP3P \cite{jorgensen83} \\
-    FF Source & CHARMM-GUI & CHARMM-GUI & CHARMM-GUI & Refs.~\citenum{kulig2016cis} \& \citenum{macrogpopc} \\
-    Parameter source & CHARMM-GUI & Slipids website & CHARMM-GUI & Refs.~\citenum{kulig2016cis} \& \citenum{macrogpopc} \\
+    FF Source & CHARMM-GUI & CHARMM-GUI & CHARMM-GUI & Refs.~\citenum{Kulig16} \& \citenum{macrogpopc} \\
+    Parameter source & CHARMM-GUI & Slipids website & CHARMM-GUI & Refs.~\citenum{Kulig16} \& \citenum{macrogpopc} \\
     \bottomrule
     \end{tabular}
 \end{center}
@@ -236,26 +238,30 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
 
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt0.pdf}
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt5.pdf}\\
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt10.pdf}
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt15.pdf}\\
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt20.pdf}
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt25.pdf}
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt0.pdf}
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt5.pdf}\\
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt10.pdf}
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt15.pdf}\\
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt20.pdf}
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt25.pdf}
     \caption{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol. More data are shown in the next figure.}
     \label{SIfig:scattering1}
 \end{figure}
 
+\clearpage
+
 \begin{figure}[htb!]
     \centering
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt30.pdf}
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt35.pdf}\\
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt40.pdf}
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt45.pdf}\\
-    \includegraphics[width=0.49\linewidth]{../FIGS/scatt50.pdf}
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt30.pdf}
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt35.pdf}\\
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt40.pdf}
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt45.pdf}\\
+    \includegraphics[width=0.45\linewidth]{../FIGS/scatt50.pdf}
     \caption{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol. More data are shown in the previous figure.}
     \label{SIfig:scattering2}
 \end{figure}
+
+\clearpage
 
 \subsection{Form Factors \& Electron Density Profiles}
 
@@ -264,15 +270,6 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \includegraphics[width=0.86\linewidth]{../FIGS/scattering.pdf}
     \caption{\label{SIfig:scattering}%
      \textbf{Scattering intensities as a function of scattering vector from experiments and simulations.} Each of the profiles is shifted vertically with respect to the previous one, by 1 for the experimental profiles and by 50 for the computational ones. The minima are marked by filled circles to guide the eye.
-    }
-\end{figure}
-
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=8.7cm]{../FIGS/ffminima.pdf}
-    \caption{\label{SIfig:ffminima}%
-    \textbf{Effecf of CHOL on the location of the first two minima in the form factor.}
-    The minima are extracted from the form factors interpolated to all CHOL concentrations (Fig.~\ref{SIfig:scattering}) from experiment and simulation with the \texttt{findpeaks} function in Matlab.
     }
 \end{figure}
 
@@ -321,7 +318,7 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \centering
     \includegraphics[width=0.9\linewidth]{../FIGS/d_vs_size.pdf}
     \caption{\label{SIfig:dvssize}%
-    \textbf{Dependence of lateral diffusion coefficients on simulation box size.} The values calculated for the lipid centres of mass with \texttt{gmx msd} after eliminating leaflet drift. The values for the three system sizes are shown as markers together with fits of Eq.~\eqref{eq:pbc}. The values extrapolated to infinite system sizes are also shown in the separate column. 
+    \textbf{Dependence of lateral diffusion coefficients on simulation box size.} The values calculated for the lipid centres of mass with \texttt{gmx msd} after eliminating leaflet drift. The values for the three system sizes are shown as markers together with fits of Eq.~\eqref{eq:sdlatpbc}. The values extrapolated to infinite system sizes are also shown in the separate column. 
     }
 \end{figure}
 
@@ -354,109 +351,8 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
 \end{figure}
 
 \clearpage
-\subsection{Cholesterol Tilt}
-
-\begin{figure}[htb!]
-    \centering
-    \includegraphics[width=8.7cm]{../FIGS/choltilt.pdf}
-    \caption{\label{SIfig:choltilt}%
-     \textbf{Effect of cholesterol concentration on the tilt of the cholesterol molecules.}
-     The tilt is defined as the angle between the vector connecting the C3 and C17 carbons at the two ends of the rigid ring structure of cholesterol. The hydroxyl group is bound to C3 and the hydrocarbon chain to C17. The tilt distributions were gathered from the two leaflets, fitted with a Gamma distribution, and the mean values and standard deviations were extracted and shown here as the value and error estimate, respectively. The cholesterol concentration was identical between the simulations, but the points are horizontally slightly shifted for clarity.
-    }
-\end{figure}
-
-\clearpage
 
 
 \bibliography{refs.bib}
 
 \end{document}
-
-
-\section{CHARMM36 results from different simulation packages} \label{CHARMMprograms}
-The results from CHARMM36 model for lipid bilayers from different 
-simulation packages have been reported to give different results in
-the literature \cite{piggot12,lee16}. The results are mainly
-dependent on different Lennard-Jones cut-off settings, but
-all the details are not quite understood. In this work we use
-the results from Gromacs 5 with settings suggested to be optimal
-by Gromacs webpage.~\todo{List these settings here or in SI.} We also compared the results from Gromacs 5 with
-these settings to the results simulated with NAMD, OpenMM and literature
-values. Based on comparison shown in Fig. \ref{programsCOMP}, we conclude
-that Gromacs 5 with settings suggested in webpage gives consistent
-results with the literature and other simulation packages. Thus these
-results are used in the main body of the paper. However, order parameters
-are slightly overestimated respected to the experiments also with these
-settings. \\
-\todo{Should be extend this discussion based on discussion at  https://github.com/NMRLipids/NmrLipidsCholXray/issues/4 ?}
- \begin{figure}[]
-  \centering
-  \includegraphics[width=8cm]{../FIGS/OrderParametersPROGRAMS.eps}
-
-  \caption{\label{programsCOMP}
-    Results for CHARMM36 model \cite{klauda10} from different simulation packages.
-    Discussion going on at {\it https://github.com/NMRLipids/NmrLipidsCholXray/issues/4}.
-  }
-\end{figure}
-
-\clearpage
-\section{Order parameter slopes as a function of cholesterol}
- \begin{figure*}[]
-  \centering
-  \includegraphics[width=19cm]{../FIGS/slopesEXPERIMENT.pdf}
-  \caption{\label{slopes}
-    Slopes of order parameters as a function of cholesterol from experiments \cite{ferreira13}.
-  }
-\end{figure*}
-
- \begin{figure*}[]
-  \centering
-  \includegraphics[width=19cm]{../FIGS/slopesBERGER.pdf}
-  \caption{\label{slopesberger}
-    Slopes of order parameters as a function of cholesterol from Berger simulations.
-  }
-\end{figure*}
-
- \begin{figure*}[]
-  \centering
-  \includegraphics[width=19cm]{../FIGS/slopesCHARMM.pdf}
-  \caption{\label{slopescharmm}
-    Slopes of order parameters as a function of cholesterol from CHARMM36 simulations.
-  }
-\end{figure*}
- \begin{figure*}[]
-  \centering
-  \includegraphics[width=19cm]{../FIGS/slopesMACROG.pdf}
-  \caption{\label{slopesmacrog}
-    Slopes of order parameters as a function of cholesterol from MacRog simulations.
-  }
-\end{figure*}
- \begin{figure*}[]
-  \centering
-  \includegraphics[width=19cm]{../FIGS/slopesSLIPIDS.pdf}
-  \caption{\label{slopesslipids}
-    Slopes of order parameters as a function of cholesterol from Slipids simulations.
-  }
-\end{figure*}
- \begin{figure*}[]
-  \centering
-  \includegraphics[width=19cm]{../FIGS/slopesSLIPIDST310K.pdf}
-  \caption{\label{slopesslipids310K}
-    Slopes of order parameters as a function of cholesterol from Slipids simulations at 298 K.
-  }
-\end{figure*}
-
-
-\clearpage
- \section{Effect of undulations on order parameters} \label{undulations}
- \todo{This should be written based on contributions in this issue:
-   https://github.com/NMRLipids/NmrLipidsCholXray/issues/16
- }
- 
-% \begin{figure}[]
-%  \centering
-%  \includegraphics[width=8cm]{../FIGS/slopesBERGER.pdf}
-%  \caption{\label{programsCOMP}
-%    Slopes of order parameters as a function of cholesterol from Berger simulations.
-%  }
-%\end{figure}
