@@ -1,2 +1,0 @@
- CholFraction ForceField temperature path DOI: Npopc Author
-0 0.0 "Berger delivered by Peter Tieleman" 298.0 ../DATA/ForPlotting/b9c/76a/b9c76a7f140b3ed219b91502a3f71aa811140a0d/2e13643638392fb362fda3742152f679a2cb453e/ 10.5281/zenodo.13814 128 "Ollila O. H. Samuli"

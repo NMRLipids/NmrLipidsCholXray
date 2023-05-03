@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+
+\usepackage{charter} % Use the Charter font for the document text
+\usepackage[left=1.15in,right=1.15in,top=1in,bottom=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{enumitem}
+
+\setlength{\parindent}{0pt}% No paragraph indent
+\setlength{\parskip}{.5\baselineskip}
+\pagestyle{empty}% No headers/footers
+\setlength{\tabcolsep}{0.5cm}
+
+\begin{document}
+
+\begin{flushright}
+\includegraphics[height=2.5cm]{CoverLetter/logo_uh.pdf}
+\end{flushright}
+
+\bigskip
+\bigskip
+\bigskip
+Dear Editor,
+\bigskip
+
+Please find enclosed our original manuscript \emph{``Quantitative Comparison With Experiments Reveals Imperfections in Force Fields' Descriptions of Phospholipid--Cholesterol Interactions''} by Peter Heftberger, Jesper J. Madsen, Josef Melcr, Markus Miettinen, Georg Pabst, and the signees to be considered for publication in \emph{Journal of Chemical Theory and Computation}.
+
+Atomistic molecular dynamics simulations are being applied to ever more complex problems in biosciences, yet the quality of these studies relies on the accuracy of the used force fields. Membrane proteins are cellular factories that reside in complex lipid environments in the plasma membrane and the membranes of intracellular organelles. While the models used in protein simulations have been validated thoroughly throughout the recent decades, the lipid ones have not been under similar scrutiny. This is surprising, considering that we have recently started to appreciate lipids as key regulators of membrane protein function through both specific interactions and membrane-mediated effects. Of most interest is cholesterol, which is known to bind to specific sites of GPCRs as well as to alter membrane properties.
+
+Here, we evaluate the ability of present force fields to capture the phospholipid--cholesterol interactions that are crucial for the accurate modeling of membrane-mediated lipid--protein interactions. Probe-free experimental techniques, NMR and X-ray scattering, provide a direct and quantitative metrics for force field quality. Importantly, by an exhaustive simulation approach with multiple system sizes, we eliminate the finite-size effects, and provide the first benchmark of the effect of cholesterol on lateral dynamics among force fields and in comparison to NMR experiments. All in all, our comparison based on both structural and dynamic properties reveals significant limitations in the present force fields. We hope that our findings will guide the refinement of the next generation of atomistic lipid force fields, and thereby improve the quality of membrane protein simulations.
+
+All the used simulation inputs and outputs are openly available online in the Zenodo repository (https://zenodo.org), and they can be programmatically accessed through the NMRlipids Databank (https://databank.nmrlipids.fi), allowing other scientists to verify our findings and to extend the presented analysis. We believe that \emph{Journal of Chemical Theory and Computation} together with these open access strategies provides the best platform for the rapid dissemination of our work. We hope to be able to improve our manuscript \textit{via} the peer review process.
+
+\vspace{2cm}
+\begin{center}
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
+	Dr. Matti Javanainen,     & Dr. Samuli Ollila, \\ 
+	Postdoctoral Researcher & Academy Research Fellow\\
+    & \\
+    \multicolumn{2}{c}{Institute of Biotechnology, University of Helsinki} \\ 
+	\multicolumn{2}{c}{Viikinkaari 5, FI-00790 Helsinki, Finland} \\
+	& \\
+    matti.javanainen@helsinki.fi & samuli.ollila@helsinki.fi \\
+\end{tabular*}
+\end{center}
+
+\end{document} 
