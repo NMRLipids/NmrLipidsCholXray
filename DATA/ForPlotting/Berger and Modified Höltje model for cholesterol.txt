@@ -1,0 +1,6 @@
+ CholFraction ForceField temperature path DOI: Npopc Author
+0 0.140625 "Berger and Modified Höltje model for cholesterol" 298.0 ../DATA/ForPlotting/c8d/54f/c8d54fda73085e3f9685615b4cccc6a3dffc7442/62808d96749eaff3b5572316cb0fbaa4d0863267/ 10.5281/zenodo.4643914 110 "Ollila O. H. Samuli; Ferreira Tiago; Topgaard Daniel"
+1 0.609375 "Berger and Modified Höltje model for cholesterol" 298.0 ../DATA/ForPlotting/9a1/605/9a16054f3de88c6236c869a48b7ba22a4560c031/1ee911c0a7597ddccc6a2f88e6de0103731df881/ 10.5281/zenodo.4644028 50 "Ollila O. H. Samuli; Ferreira Tiago; Topgaard Daniel"
+2 0.5 "Berger and Modified Höltje model for cholesterol" 298.0 ../DATA/ForPlotting/f62/739/f627391cd6cddf82078a7a12c4cd22767535b6fe/d9c93bb0ae93ede37c230593a348691012519efc/ 10.5281/zenodo.4643862 64 "Ollila O. H. Samuli; Ferreira Tiago; Topgaard Daniel"
+3 0.34375 "Berger and Modified Höltje model for cholesterol" 298.0 ../DATA/ForPlotting/b04/7ff/b047ffe7ca543800f5d13bc850bbb66924b7231b/76a77f734fea9fcca1189a8c5b4533a68d73ead5/ 10.5281/zenodo.4643985 84 "Ollila O. H. Samuli; Ferreira Tiago; Topgaard Daniel"
+4 0.0625 "Berger and Modified Höltje model for cholesterol" 298.0 ../DATA/ForPlotting/b16/7e2/b167e26f39a390c69bc605c2217f732d854c6395/f5de1720a24e1896cf96afc94fc4ef028adc47d0/ 10.5281/zenodo.4643899 120 "Ollila O. H. Samuli; Ferreira Tiago; Topgaard Daniel"

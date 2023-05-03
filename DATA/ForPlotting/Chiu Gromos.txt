@@ -1,0 +1,2 @@
+ CholFraction ForceField temperature path DOI: Npopc Author
+0 0.0 "Chiu Gromos" 298.0 ../DATA/ForPlotting/ac4/242/ac4242b5de6414ba1746a497c552dd92472a1ce3/5e793f635d83d27ec6aff19ad4eb688a872a9d76/ 10.5281/zenodo.6656031 128 "Ollila Samuli"

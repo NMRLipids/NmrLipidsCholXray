@@ -1,0 +1,2 @@
+ CholFraction ForceField temperature path DOI: Npopc Author
+0 0.0 "Lipid14 with Verlet scheme" 298.15 ../DATA/ForPlotting/eba/d7b/ebad7bde0e3d5e5fcc3a64387f569e10162fe7c0/9caac3eaf3998263deea32cbee2b2f947d38dcea/ 10.5281/zenodo.30898 128 "Girych Mykhailo; Ollila O. H. Samuli"
