@@ -1,4 +1,4 @@
-\documentclass[journal=jpcbfk]{achemso}
+\documentclass[journal=jpcbfk,manuscript=suppinfo]{achemso}
 
 \usepackage[version=3]{mhchem}
 \usepackage[T1]{fontenc}
@@ -34,45 +34,36 @@
 \externaldocument{manuscript}
 
 \author{Peter Heftberger}
-\affiliation{Institute of Molecular Biosciences, Biophysics Division, NAWI Graz, University of Graz, Graz 8010, Austria}
+\affiliation{Biophysics, Institute of Molecular Biosciences, NAWI Graz, University of Graz, 8010 Graz, Austria}
 %
 \author{Matti Javanainen}
-\affiliation{Institute of Organic Chemistry and Biochemistry,
-Academy of Sciences of the Czech Republic, 
-Prague 6, Czech Republic}
-\alsoaffiliation{Institute of Biotechnology, University of Helsinki}
+\affiliation{Institute of Organic Chemistry and Biochemistry, Academy of Sciences of the Czech Republic, 16000 Prague 6, Czech Republic}
+\alsoaffiliation{Institute of Biotechnology, University of Helsinki, 00790 Helsinki, Finland}
 \email{matti.javanainen@helsinki.fi}
 %
 \author{Jesper J. Madsen}
-\affiliation{Department of Global Health, College of Public Health}
-\alsoaffiliation{University of South Florida}
+\affiliation{Global and Planetary Health, College of Public Health}
+\alsoaffiliation{Department of Molecular Medicine, Morsani College of Medicine}
+\alsoaffiliation{University of South Florida, Tampa, Florida, 33612, United States of America}
 %
-\author{Markus Miettinen}
-\affiliation{Department of Chemistry, University of Bergen, Norway}
-\alsoaffiliation{Computational Biology Unit, Department of Informatics, University of Bergen, Norway}
+\author{Markus S. Miettinen}
+\affiliation{Fachbereich Physik, Freie Universit\"at Berlin, 14195 Berlin, Germany}
+\alsoaffiliation{Department of Chemistry, University of Bergen, 5007 Bergen, Norway}
+\alsoaffiliation{Computational Biology Unit, Department of Informatics, University of Bergen, 5008 Bergen, Norway}
 %
 \author{O. H. Samuli Ollila}
-\affiliation{Institute of Organic Chemistry and Biochemistry,
-Academy of Sciences of the Czech Republic, 
-Prague 6, Czech Republic}
-\alsoaffiliation{Institute of Biotechnology, University of Helsinki}
+\affiliation{Institute of Organic Chemistry and Biochemistry, Academy of Sciences of the Czech Republic, 16000 Prague 6, Czech Republic}
+\alsoaffiliation{Institute of Biotechnology, University of Helsinki, 00790 Helsinki, Finland}
 \email{samuli.ollila@helsinki.fi}
 %
 \author{Georg Pabst}
-\affiliation{Institute of Molecular Biosciences, Biophysics Division, NAWI Graz, University of Graz, Graz 8010, Austria}
-\alsoaffiliation{BioTechMed-Graz, Graz 8010, Austria}
-%
+\affiliation{Biophysics, Institute of Molecular Biosciences, NAWI Graz, University of Graz, 8010 Graz, Austria}
+\alsoaffiliation{BioTechMed-Graz, 8010 Graz, Austria}
+\alsoaffiliation{Field of Excellence BioHealth—University of Graz, 8010 Graz, Austria}
 
 \SectionNumbersOn
 
-\renewcommand{\thetable}{S\arabic{table}}%
-\renewcommand{\thefigure}{S\arabic{figure}}%
-\renewcommand{\thesection}{S\arabic{section}}%
-\renewcommand{\thepage}{S\arabic{page}}%
-
-
-\title{SUPPLEMENTARY INFORMATION FOR\\ 
-    NMRlipids III: Lipid--Cholesterol Interactions in Atomistic Resolution Molecular Dynamics Simulations}
+\title{Quantitative Comparison Against Experiments Reveals Imperfections in Force Fields' Descriptions of Phospholipid--Cholesterol Interactions}
 
 \begin{document}
 
@@ -80,7 +71,7 @@ Prague 6, Czech Republic}
 
 \section{Simulation Details}
 
-The force field specific simulation parameters used for each force field are listed in Table~\ref{SItab:params}. The parameter input files (\texttt{.mdp}) are provided in the Zenodo portal (links in the main text). For all simulations, we used an integration time step of 2~fs and the leap-frog integrator of GROMACS. The isothermal--isobaric (NPT) ensemble was used with a temperature of 298~K and a pressure of 1~bar. All simulations were 1~\textmu{}s long, and trajectories were written every 1~ns. The P-LINCS constraint algorithm \cite{hess97,hess07} was used for the bonds noted in Table~\ref{SItab:params}. NMRlipids databank~\cite{NMRlipidsDatabank} ID numbers of simulations are given in table~\ref{IDtable}.
+The force-field-specific simulation parameters used for each force field are listed in Table~\ref{SItab:params}. The parameter input files (\texttt{.mdp}) are provided in the Zenodo portal (links in the main text). For all simulations, we used an integration time step of 2~fs and the leap-frog integrator of GROMACS. The isothermal--isobaric (NPT) ensemble was used with a temperature of 298~K and a pressure of 1~bar. All simulations were 1~\textmu{}s long, and trajectories were written every 1~ns. The P-LINCS constraint algorithm \cite{hess97,hess07} was used for the bonds noted in Table~\ref{SItab:params}. NMRlipids Databank~\cite{NMRlipidsDatabank} ID numbers of simulations are given in Table~\ref{IDtable}.
 
 \begin{sidewaystable}[]
 \begin{center}
@@ -118,27 +109,36 @@ The force field specific simulation parameters used for each force field are lis
 \clearpage
 
 \begin{table}[]
+\begin{small}
 \begin{tabular}{ccc}
 \textbf{CHARMM36} \\
 \toprule
 \textbf{System} & \textbf{ID} \\
 \midrule
-1024POPC\_128CHOL\_57600SOL\_298K  &  426 \\ 
-64POPC\_3200SOL\_298K  &  546 \\ 
-1024POPC\_896CHOL\_96000SOL\_298K  &  543 \\ 
-64POPC\_40CHOL\_5200SOL\_298K  &  620 \\ 
-64POPC\_56CHOL\_6000SOL\_298K  &  91 \\ 
-1024POPC\_416CHOL\_72000SOL\_298K  &  412 \\ 
-1024POPC\_256CHOL\_64000SOL\_298K  &  88 \\ 
-256POPC\_64CHOL\_16000SOL\_298K  &  72 \\ 
+64POPC\_3200SOL\_298K  &  678 \\ 
+256POPC\_12800SOL\_298K  &  710 \\ 
+1024POPC\_51200SOL\_298K  &  701 \\ 
+\midrule
 64POPC\_8CHOL\_3600SOL\_298K  &  109 \\ 
-256POPC\_104CHOL\_18000SOL\_298K  &  298 \\ 
-64POPC\_16CHOL\_4000SOL\_298K  &  525 \\ 
-64POPC\_26CHOL\_4500SOL\_298K  &  393 \\ 
-1024POPC\_640CHOL\_83200SOL\_298K  &  550 \\ 
-256POPC\_160CHOL\_20800SOL\_298K  &  275 \\ 
-256POPC\_224CHOL\_24000SOL\_298K  &  166 \\ 
 256POPC\_32CHOL\_14400SOL\_298K  &  119 \\ 
+1024POPC\_128CHOL\_57600SOL\_298K  &  426 \\ 
+\midrule
+64POPC\_16CHOL\_4000SOL\_298K  &  525 \\ 
+256POPC\_64CHOL\_16000SOL\_298K  &  72 \\ 
+1024POPC\_256CHOL\_64000SOL\_298K  &  88 \\ 
+\midrule
+64POPC\_26CHOL\_4500SOL\_298K  &  393 \\ 
+256POPC\_104CHOL\_18000SOL\_298K  &  298 \\ 
+1024POPC\_416CHOL\_72000SOL\_298K  &  412 \\ 
+\midrule
+64POPC\_40CHOL\_5200SOL\_298K  &  620 \\ 
+256POPC\_160CHOL\_20800SOL\_298K  &  275 \\ 
+1024POPC\_640CHOL\_83200SOL\_298K  &  550 \\ 
+\midrule
+64POPC\_56CHOL\_6000SOL\_298K  &  91 \\ 
+256POPC\_224CHOL\_24000SOL\_298K  &  166 \\ 
+1024POPC\_896CHOL\_96000SOL\_298K  &  543 \\ 
+\bottomrule
 \end{tabular}
 \quad
 \begin{tabular}{cc}
@@ -146,24 +146,30 @@ The force field specific simulation parameters used for each force field are lis
 \toprule
 \textbf{System} & \textbf{ID} \\
 \midrule
-Slipids\_POPC\_CHOL20\_L  &  691 \\ 
-Slipids\_POPC\_CHOL47\_M  &  712 \\ 
-Slipids\_POPC\_CHOL29\_S  &  693 \\ 
-Slipids\_POPC\_CHOL20\_S  &  692 \\ 
-Slipids\_POPC\_CHOL20\_M  &  687 \\ 
+Slipids\_POPC\_S  &  664 \\ 
+Slipids\_POPC\_M  &  708 \\ 
+Slipids\_POPC\_L  &  696 \\ 
+\midrule
 Slipids\_POPC\_CHOL11\_S  &  672 \\ 
 Slipids\_POPC\_CHOL11\_M  &  681 \\ 
-Slipids\_POPC\_L  &  696 \\ 
-Slipids\_POPC\_CHOL38\_S  &  661 \\ 
-Slipids\_POPC\_M  &  708 \\ 
-Slipids\_POPC\_CHOL38\_L  &  670 \\ 
-Slipids\_POPC\_S  &  664 \\ 
-Slipids\_POPC\_CHOL29\_L  &  709 \\ 
-Slipids\_POPC\_CHOL29\_M  &  659 \\ 
 Slipids\_POPC\_CHOL11\_L  &  697 \\ 
+\midrule
+Slipids\_POPC\_CHOL20\_S  &  692 \\ 
+Slipids\_POPC\_CHOL20\_M  &  687 \\ 
+Slipids\_POPC\_CHOL20\_L  &  691 \\ 
+\midrule
+Slipids\_POPC\_CHOL29\_S  &  693 \\ 
+Slipids\_POPC\_CHOL29\_M  &  659 \\ 
+Slipids\_POPC\_CHOL29\_L  &  709 \\ 
+\midrule
+Slipids\_POPC\_CHOL38\_S  &  661 \\ 
 Slipids\_POPC\_CHOL38\_M  &  668 \\ 
+Slipids\_POPC\_CHOL38\_L  &  670 \\ 
+\midrule
 Slipids\_POPC\_CHOL47\_S  &  703 \\ 
+Slipids\_POPC\_CHOL47\_M  &  712 \\ 
 Slipids\_POPC\_CHOL47\_L  &  682 \\
+\bottomrule
 \end{tabular}
 \quad
 \begin{tabular}{cc}
@@ -171,24 +177,30 @@ Slipids\_POPC\_CHOL47\_L  &  682 \\
 \toprule
 \textbf{System} & \textbf{ID} \\
 \midrule
-Lipid17\_POPC\_CHOL29\_M  &  700 \\ 
-Lipid17\_POPC\_CHOL47\_L  &  717 \\ 
-Lipid17\_POPC\_CHOL11\_L  &  663 \\ 
-Lipid17\_POPC\_CHOL29\_L  &  683 \\ 
-Lipid17\_POPC\_CHOL20\_S  &  662 \\ 
-Lipid17\_POPC\_CHOL47\_M  &  714 \\ 
-Lipid17\_POPC\_CHOL38\_S  &  688 \\ 
-Lipid17\_POPC\_L  &  684 \\ 
 Lipid17\_POPC\_S  &  715 \\ 
-Lipid17\_POPC\_CHOL20\_M  &  666 \\ 
 Lipid17\_POPC\_M  &  657 \\ 
-Lipid17\_POPC\_CHOL29\_S  &  686 \\ 
-Lipid17\_POPC\_CHOL38\_L  &  673 \\ 
-Lipid17\_POPC\_CHOL47\_S  &  707 \\ 
+Lipid17\_POPC\_L  &  684 \\ 
+\midrule
 Lipid17\_POPC\_CHOL11\_S  &  680 \\ 
-Lipid17\_POPC\_CHOL20\_L  &  667 \\ 
-Lipid17\_POPC\_CHOL38\_M  &  694 \\ 
 Lipid17\_POPC\_CHOL11\_M  &  689 \\
+Lipid17\_POPC\_CHOL11\_L  &  663 \\ 
+\midrule
+Lipid17\_POPC\_CHOL20\_S  &  662 \\ 
+Lipid17\_POPC\_CHOL20\_M  &  666 \\ 
+Lipid17\_POPC\_CHOL20\_L  &  667 \\ 
+\midrule
+Lipid17\_POPC\_CHOL29\_S  &  686 \\ 
+Lipid17\_POPC\_CHOL29\_M  &  700 \\ 
+Lipid17\_POPC\_CHOL29\_L  &  683 \\ 
+\midrule
+Lipid17\_POPC\_CHOL38\_S  &  688 \\ 
+Lipid17\_POPC\_CHOL38\_M  &  694 \\ 
+Lipid17\_POPC\_CHOL38\_L  &  673 \\ 
+\midrule
+Lipid17\_POPC\_CHOL47\_S  &  707 \\ 
+Lipid17\_POPC\_CHOL47\_M  &  714 \\ 
+Lipid17\_POPC\_CHOL47\_L  &  717 \\ 
+\bottomrule
 \end{tabular}
 \quad
 \begin{tabular}{cc}
@@ -196,26 +208,33 @@ Lipid17\_POPC\_CHOL11\_M  &  689 \\
 \toprule
 \textbf{System} & \textbf{ID} \\
 \midrule
-MacRog\_POPC\_CHOL38\_S  &  716 \\ 
-MacRog\_POPC\_CHOL29\_L  &  705 \\ 
-MacRog\_POPC\_CHOL47\_M  &  699 \\ 
-MacRog\_POPC\_CHOL47\_L  &  671 \\ 
-MacRog\_POPC\_CHOL20\_L  &  677 \\ 
 MacRog\_POPC\_S  &  674 \\ 
-MacRog\_POPC\_CHOL20\_M  &  706 \\ 
-MacRog\_POPC\_CHOL38\_L  &  698 \\ 
-MacRog\_POPC\_CHOL38\_M  &  679 \\ 
 MacRog\_POPC\_M  &  675 \\ 
 MacRog\_POPC\_L  &  658 \\ 
-MacRog\_POPC\_CHOL29\_M  &  655 \\ 
-MacRog\_POPC\_CHOL11\_L  &  660 \\ 
+\midrule
 MacRog\_POPC\_CHOL11\_S  &  665 \\ 
-MacRog\_POPC\_CHOL29\_S  &  690 \\ 
 MacRog\_POPC\_CHOL11\_M  &  695 \\ 
-MacRog\_POPC\_CHOL47\_S  &  704 \\ 
+MacRog\_POPC\_CHOL11\_L  &  660 \\ 
+\midrule
 MacRog\_POPC\_CHOL20\_S  &  702 \\
+MacRog\_POPC\_CHOL20\_M  &  706 \\ 
+MacRog\_POPC\_CHOL20\_L  &  677 \\ 
+\midrule
+MacRog\_POPC\_CHOL29\_S  &  690 \\ 
+MacRog\_POPC\_CHOL29\_M  &  655 \\ 
+MacRog\_POPC\_CHOL29\_L  &  705 \\ 
+\midrule
+MacRog\_POPC\_CHOL38\_S  &  716 \\ 
+MacRog\_POPC\_CHOL38\_M  &  679 \\ 
+MacRog\_POPC\_CHOL38\_L  &  698 \\ 
+\midrule
+MacRog\_POPC\_CHOL47\_S  &  704 \\ 
+MacRog\_POPC\_CHOL47\_M  &  699 \\ 
+MacRog\_POPC\_CHOL47\_L  &  671 \\ 
+\bottomrule
 \end{tabular}
-\caption{NMRlipids databank IDs of performed simulations.}\label{IDtable}
+\caption{NMRlipids Databank IDs of performed simulations.}\label{IDtable}
+\end{small}
 \end{table}
 
 \clearpage
@@ -232,7 +251,7 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt15.pdf}\\
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt20.pdf}
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt25.pdf}
-    \caption{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol. More data are shown in the next figure.}
+    \caption{\textbf{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol.} More data are shown in the next figure.}
     \label{SIfig:scattering1}
 \end{figure}
 
@@ -245,7 +264,7 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt40.pdf}
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt45.pdf}\\
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt50.pdf}
-    \caption{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol. More data are shown in the previous figure.}
+    \caption{\textbf{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol.} More data are shown in the previous figure.}
     \label{SIfig:scattering2}
 \end{figure}
 
@@ -257,7 +276,7 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \centering
     \includegraphics[width=0.86\linewidth]{../FIGS/scattering.pdf}
     \caption{\label{SIfig:scattering}%
-     \textbf{Scattering intensities as a function of scattering vector from experiments and simulations.} Each of the profiles is shifted vertically with respect to the previous one, by 1 for the experimental profiles and by 50 for the computational ones. The minima are marked by filled circles to guide the eye.
+     \textbf{Absolute values of X-ray scattering form factors.} Each of the profiles is shifted vertically with respect to the previous one, by 1 for the experimental profiles and by 50 for the computational ones. The minima are marked by filled circles to guide the eye. The numerical data for these plots can be found from the entries in the NMRlipids databank with the ID numbers listed in Table~\ref{IDtable}.
     }
 \end{figure}
 
@@ -266,7 +285,15 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \includegraphics[width=\linewidth]{../FIGS/densityprofiles.pdf}
     \caption{\label{SIfig:densprofs}%
     \textbf{Electron density profiles.}
-    Each of the profiles is shifted vertically with respect to the previous one by 100 units.
+    Each of the profiles is shifted vertically with respect to the previous one by 100 units. The numerical data for these plots can be found from the entries in the NMRlipids databank with the ID numbers listed in Table~\ref{IDtable}.
+    }
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=8.7cm]{../FIGS/firstminima.pdf}
+    \caption{\label{SIfig:firstminima}%
+     \textbf{Deviation of the first form factor minima.} 
     }
 \end{figure}
 
@@ -278,7 +305,7 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \includegraphics[width=0.9\linewidth]{../FIGS/palmitate.pdf}
     \caption{\label{SIfig:palmitate}%
      \textbf{Effect of cholesterol on the acyl chain order parameters of the POPC $sn$-1 (palmitate) chain.}
-     The legend at the top corresponds to all simulations, and the one at the bottom to the experiments.
+     The legend at the top corresponds to all simulations, and the one at the bottom to the experiments. Error bars in simulations are smaller than symbols. Error of the experimental data is estimated to be $\pm$0.02~\cite{Ollila16}. The numerical data for these plots can be found from the entries in the NMRlipids databank with the ID numbers listed in Table~\ref{IDtable}.
     }
 \end{figure}
 
@@ -287,7 +314,7 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \includegraphics[width=0.9\linewidth]{../FIGS/oleate.pdf}
     \caption{\label{SIfig:oleate}%
      \textbf{Effect of cholesterol on the acyl chain order parameters of the POPC $sn$-2 (oleate) chain.}
-     The legend at the top corresponds to all simulations, and the one at the bottom to the experiments. Since the order parameters measured for the two hydrogens bound to the C2 carbon differ, they are both shown in the plots.
+     The legend at the top corresponds to all simulations, and the one at the bottom to the experiments. Since the order parameters measured for the two hydrogens bound to the C2 carbon differ, they are both shown in the plots. Stereospecific labeling is not done for these hydrogens but the one with larger value is shown first. Error bars in simulations are smaller than symbols. Error of the experimental data is estimated to be $\pm$0.02~\cite{Ollila16}. The numerical data for these plots can be found from the entries in the NMRlipids databank with the ID numbers listed in Table~\ref{IDtable}.
     }
 \end{figure}
 
@@ -306,7 +333,7 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \centering
     \includegraphics[width=0.9\linewidth]{../FIGS/d_vs_size.pdf}
     \caption{\label{SIfig:dvssize}%
-    \textbf{Dependence of lateral diffusion coefficients on simulation box size.} The values calculated for the lipid centres of mass with \texttt{gmx msd} after eliminating leaflet drift. The values for the three system sizes are shown as markers together with fits of Eq.~\eqref{eq:sdlatpbc}. The values extrapolated to infinite system sizes are also shown in the separate column. 
+    \textbf{Dependence of POPC lateral diffusion coefficients on the simulation box size.} The values calculated for the lipid centres of mass with \texttt{gmx msd} after eliminating leaflet drift. The values for the three system sizes are shown as markers together with fits of Eq.~\eqref{eq:sdlatpbc}. The values extrapolated to infinite system sizes are also shown in the separate column. 
     }
 \end{figure}
 
@@ -314,7 +341,7 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \centering
     \includegraphics[width=0.9\linewidth]{../FIGS/d_vs_chol.pdf}
     \caption{\label{SIfig:dvschol}%
-     \textbf{Dependence of lateral diffusion coefficients on cholesterol concentration.} Data are shown for all system sizes; small (S), medium (M), and large (L). The values extrapolated to infinity are shown as well ($\infty$). Experimental measured at two hydration levels, 30 m-\% and 55-\% of water \cite{filippov2003effect,filippov2003influence}.
+     \textbf{Dependence of POPC lateral diffusion coefficients on cholesterol concentration.} Data are shown for all system sizes; small (S), medium (M), and large (L). The values extrapolated to infinity are shown as well ($\infty$). Experimental data were measured at a hydration level of 55~wt-\% of water \cite{filippov2003effect,filippov2003influence}, whereas simulations have a hydration level of~$\sim$54~wt-\%.
     }
 \end{figure}
 
@@ -325,7 +352,7 @@ MacRog\_POPC\_CHOL20\_S  &  702 \\
     \centering
     \includegraphics[width=8.7cm]{../FIGS/apl_vs_size.pdf}
     \caption{\label{SIfig:aplvssize}%
-     \textbf{Dependence of area per lipid on simulation box size.} Area per lipid is calculated by dividing the membrane area by the number of lipids in one leaflet. Error bars show standard error extracted using block averaging in \texttt{gmx analyze}.
+     \textbf{Dependence of area per lipid on simulation size.} Area per lipid is calculated by dividing the box area by the number of lipids in one leaflet. Error bars show standard error extracted using block averaging in \texttt{gmx analyze}.
     }
 \end{figure}
 
