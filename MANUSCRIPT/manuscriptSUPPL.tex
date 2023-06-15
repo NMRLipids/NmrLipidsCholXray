@@ -33,13 +33,13 @@
 
 \externaldocument{manuscript}
 
-\author{Peter Heftberger}
-\affiliation{Biophysics, Institute of Molecular Biosciences, NAWI Graz, University of Graz, 8010 Graz, Austria}
-%
 \author{Matti Javanainen}
 \affiliation{Institute of Organic Chemistry and Biochemistry, Academy of Sciences of the Czech Republic, 16000 Prague 6, Czech Republic}
 \alsoaffiliation{Institute of Biotechnology, University of Helsinki, 00790 Helsinki, Finland}
 \email{matti.javanainen@helsinki.fi}
+%
+\author{Peter Heftberger}
+\affiliation{Biophysics, Institute of Molecular Biosciences, NAWI Graz, University of Graz, 8010 Graz, Austria}
 %
 \author{Jesper J. Madsen}
 \affiliation{Global and Planetary Health, College of Public Health}
@@ -51,15 +51,17 @@
 \alsoaffiliation{Department of Chemistry, University of Bergen, 5007 Bergen, Norway}
 \alsoaffiliation{Computational Biology Unit, Department of Informatics, University of Bergen, 5008 Bergen, Norway}
 %
-\author{O. H. Samuli Ollila}
-\affiliation{Institute of Organic Chemistry and Biochemistry, Academy of Sciences of the Czech Republic, 16000 Prague 6, Czech Republic}
-\alsoaffiliation{Institute of Biotechnology, University of Helsinki, 00790 Helsinki, Finland}
-\email{samuli.ollila@helsinki.fi}
-%
 \author{Georg Pabst}
 \affiliation{Biophysics, Institute of Molecular Biosciences, NAWI Graz, University of Graz, 8010 Graz, Austria}
 \alsoaffiliation{BioTechMed-Graz, 8010 Graz, Austria}
 \alsoaffiliation{Field of Excellence BioHealth—University of Graz, 8010 Graz, Austria}
+%
+\author{O. H. Samuli Ollila}
+\affiliation{Institute of Biotechnology, University of Helsinki, 00790 Helsinki, Finland}
+\alsoaffiliation{VTT Technical Research Centre of Finland, Espoo, Finland}
+\email{samuli.ollila@helsinki.fi}
+%
+
 
 \SectionNumbersOn
 
@@ -251,7 +253,7 @@ MacRog\_POPC\_CHOL47\_L  &  671 \\
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt15.pdf}\\
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt20.pdf}
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt25.pdf}
-    \caption{\textbf{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol.} More data are shown in the next figure.}
+    \caption{\textbf{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol.} Solid lines correspond to best fits using the SDP-GAP model. More data are shown in the next figure.}
     \label{SIfig:scattering1}
 \end{figure}
 
@@ -264,7 +266,7 @@ MacRog\_POPC\_CHOL47\_L  &  671 \\
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt40.pdf}
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt45.pdf}\\
     \includegraphics[width=0.45\linewidth]{../FIGS/scatt50.pdf}
-    \caption{\textbf{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol.} More data are shown in the previous figure.}
+    \caption{\textbf{Scattering intensities from X-ray scattering experiments with various concentrations of cholesterol.} Solid lines correspond to best fits using the SDP-GAP model. More data are shown in the previous figure.}
     \label{SIfig:scattering2}
 \end{figure}
 
@@ -342,6 +344,15 @@ MacRog\_POPC\_CHOL47\_L  &  671 \\
     \includegraphics[width=0.9\linewidth]{../FIGS/d_vs_chol.pdf}
     \caption{\label{SIfig:dvschol}%
      \textbf{Dependence of POPC lateral diffusion coefficients on cholesterol concentration.} Data are shown for all system sizes; small (S), medium (M), and large (L). The values extrapolated to infinity are shown as well ($\infty$). Experimental data were measured at a hydration level of 55~wt-\% of water \cite{filippov2003effect,filippov2003influence}, whereas simulations have a hydration level of~$\sim$54~wt-\%.
+    }
+\end{figure}
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{../FIGS/viscoerrors.pdf}
+    \caption{\label{SIfig:viscoerrors}%
+    \textbf{Error estimation for viscosities.}
+    The error in $D_\infty$ was estimated by performing 10,000 fits of Eq.~\eqref{eq:sdlatpbc} with each $D$ value assigned a random error (see the caption of Fig.~\ref{fig:dynamics} in the main text). These fits revealed a skewed Gaussian distribution of the viscosity values, which could be fitted by two Gaussians. The mean values and the corresponding standard deviations are shown here for all simulations. For some simulations, the distribution is close to unimodal and the two markers overlap, whereas for some they deviate significantly. The data for different force fields are slightly shifted horizonatally for readability.
     }
 \end{figure}
 
